@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%; //10px
   body {
-    font-size: 1.6em;
+    font-size: 1.6em; //16px
     font-family: "Noto Serif JP", serif;
     color: $gray-color;
     .wrapper{
@@ -1040,7 +1040,7 @@ body.appear .wrapper{
     h2{
       // font-family: 'Italianno', cursive;
       // font-weight: normal;
-      font-size: 3.0rem;
+      font-size: 5.0rem;
       // font-style: italic;
       // text-align: center;
       position: relative;
