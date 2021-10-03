@@ -1,0 +1,1259 @@
+@use "reset";
+
+
+/* -------------------------------------------------
+共通レイアウト
+----------------------------------------------------*/
+
+/* ---変数定義---*/
+$silverPink-color: #f0e8ec;
+$gray-color: #313131;
+$pink-color: #eaa0a0;
+
+/* ------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=MonteCarlo&family=Tangerine:wght@700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; //10px
+  body {
+    font-size: 1.6em;
+    font-family: "Noto Serif JP", serif;
+    color: $gray-color;
+    .wrapper{
+      width: 90%;
+      margin: 0% auto;
+      margin-bottom: 3%;
+      background-color: $silverPink-color;
+      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+      border-radius: 0 0 10% 1%;
+    }
+  }
+}
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: $gray-color;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+  display: block;
+  content: "";
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  background-color: $gray-color;/*伸びる背景色の設定*/
+  animation-name:pageAnime;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes pageAnime{
+  0% {
+    transform-origin:top;
+    transform:scaleY(0);
+  }
+  50% {
+    transform-origin:top;
+    transform:scaleY(1);
+  }
+  50.001% {
+    transform-origin:bottom;
+  }
+  100% {
+    transform-origin:bottom;
+    transform:scaleY(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+.wrapper{
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .wrapper{
+  animation-name:pageAnimeAppear;
+  animation-duration:1s;
+  animation-delay: 0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes pageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+.TextTyping span {
+	display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+ 	content: "|";
+	animation: typingAnime .8s ease infinite;
+}
+
+@keyframes typingAnime{
+	from{
+    opacity:0
+  }
+	to{
+    opacity:1
+  }
+}
+
+
+/*========= スクロール時ふわっと表示させるCSS ===============*/
+
+/* 下から上へふわっと表示 */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-fill-mode: forwards;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定*/
+
+.delay{
+  animation-delay: 1s;
+}
+
+.fadeUpTrigger{
+  opacity: 0;
+}
+
+/* --------------ヘッダー--------------*/
+.header{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 86.7%;
+  margin: 1% auto;
+  padding: 1.5% 0;
+  font-size: 2rem;
+  .h1-wrap{
+    width: 50%;
+  h1{
+    width: 90%;
+    position: relative;
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    text-align: left;
+    box-sizing: border-box;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3%;
+      bottom: 104%;
+      left: 0;
+      background-color: #000;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3%;
+      bottom: -10%;
+      left: 0;
+      background-color: #000;
+    }
+    a{
+      display: block;
+      padding: 4% 0 4% 5%;
+      text-decoration: none;
+      // margin: 0 10% 0 0;
+      color: $silverPink-color;
+      background-color: #31314C;
+      &:hover{
+        color: #fff;
+        background-color: $gray-color;
+        transition: all 0.5s 0s ease;
+       }
+    }
+  }
+}
+/* ----ナビゲーション----*/
+.nav{
+  width: 50%;
+  position: relative;
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 1.5px solid #000;
+    li{
+      width: 33.3%;
+      text-align: center;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 80%;
+        bottom: 10%;
+        left: 33.3%;
+        background-color: #000;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 80%;
+        bottom: 10%;
+        left: 66.6%;
+        background-color: #000;
+      }
+      a{
+        display: block;
+        padding: 10% 0;
+        margin: 3%;
+        text-decoration: none;
+        color: #000;   
+        &:hover{
+          color: #fff;
+          background-color: rosybrown;
+          transition: all 0.5s 0s ease;
+         }
+       }
+     }
+   }
+ }
+}
+
+/* --------------コンテナ--------------*/
+
+.container{
+  width: 86.7%;
+  max-width: 1729px;
+  margin: 0 auto;
+  margin-bottom: -7%;
+  border: 1px solid #000;
+}
+
+/* --------------トップエリア--------------*/
+.topArea{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: flex-start;
+  &::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 30%;
+    top: 0;
+    left: 50%;
+    background-color: #000;
+    opacity: 0;
+    animation: heightlineAnime 3s infinite ease-in-out forwards;
+    animation-delay: 8s;
+  }
+  @keyframes heightlineAnime {
+    0%{
+      height:0;
+      top:70%;
+      opacity: 0;
+    }
+    30%{
+      height:40%;
+      opacity: 1;
+    }
+    100%{
+      height:0;
+      top:120%;
+      opacity: 0;
+    }
+  }
+  .topImg{
+    width: 45%;
+    padding: 3% 0 0 3%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    img{
+      width: 100%;
+      z-index: 1;
+    }
+    .shadowBox{
+     position: absolute;
+     top: 9%;
+     left: 6%;
+     width: 90%;
+     height: 95%;
+     opacity: 0.3;
+     background-color: $gray-color;
+     border-radius: 2% 2% 68% 2%;
+     z-index: -1;
+     animation: shadowAnime 3s forwards;
+     animation-delay: 1s;
+    } 
+    @keyframes shadowAnime {
+      0% {
+      transform: translateX(0px);
+      }
+    
+      100% {
+      transform: translateX(10%);
+      }
+    }   
+   }
+  .topTxt{
+    width: 55%;
+    padding: 5%;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 0.09em;
+    h1{
+      position: relative;
+      font-size: 4.5rem;
+      white-space: nowrap;
+      margin: 12% 0 0;
+      border-bottom: 2px solid #000;
+      padding: 0 0 3% 0;
+      opacity: 0;
+      animation: fadeInAnime 3s ease forwards;
+      animation-delay: 2s;
+      @keyframes fadeInAnime{
+        0% {
+          opacity: 0;
+        }      
+        100% {
+          opacity: 1;
+        }
+      }
+      .color-pink{
+        color: $pink-color;
+       }
+      &::before{
+        content: '';
+        position: absolute;
+        // width: 100%;
+        height: 1%;
+        bottom: -8%;
+        left: 0;
+        background-color: #000;
+        animation: widthlineAnime 3s linear forwards;
+        animation-delay: 2s;
+        opacity: 0;
+        @keyframes widthlineAnime {
+          0%{
+            opacity: 0;
+            width: 20%;
+          }
+          100%{
+            opacity: 1;
+            width: 100%;
+          }
+        }
+      }
+    }
+    h2{
+      font-size: 4rem;
+      // white-space: nowrap;
+      margin: 15% 0 8%;
+      opacity: 0;
+      animation: fadeInAnime02 2s linear forwards;
+      animation-delay: 3s;
+      @keyframes fadeInAnime02 {
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+      .space{
+      padding: 0 10%;
+      }
+    }
+    p{
+      font-size: 2rem;
+      line-height: 2.0;
+      white-space: pre-line;
+      opacity: 0;
+      animation: fadeInAnime03 0.5s linear forwards;
+      animation-delay: 4s;
+      @keyframes fadeInAnime03 {
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+  /* --------------メインエリア--------------*/
+
+.pink{
+    color: $pink-color;
+  }
+
+.mainArea{
+  margin: 15% 5%;
+    h2{
+      font-family: 'Italianno', cursive;
+      font-weight: normal;
+      font-size: 8.0rem;
+      font-style: italic;
+      text-align: center;
+      position: relative;
+      &.rollAnime.roll span{
+        transition-property: opacity,transform;
+        transform: rotateY(360deg);
+        transition: all .8s cubic-bezier(.77,0,.175,1);
+        transition-timing-function: cubic-bezier(.77,0,.175,1);
+        display: inline-block;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1%;
+        bottom: 50%;
+        right: 60%;
+        background-color: #000;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 1%;
+        bottom: 50%;
+        left: 60%;
+        background-color: #000;
+      }
+    }
+     p{
+      text-align: center;
+    }
+}
+
+/* --------------skills--------------*/
+.skills-contents{
+  margin: 10% 0;
+.skills-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  margin: 5%;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    bottom: 5%;
+    left: 50%;
+    background-color: #000;
+  }
+  .skills-inner{
+    width: 45%;
+    text-align: center;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 100%;
+    }
+    .skillsTxt{
+        flex: 1;
+        margin: 7% 3%;
+      h3{
+        font-size: 2rem;
+      }
+      p{
+        text-align: initial;
+        font-size: 1.6rem;
+        line-height: 1.8;
+        letter-spacing: 0.2rem;
+        margin: 7% 0 0 0;
+      }
+    }
+    .skills-detail{
+      background-color:$gray-color;
+      color: $silverPink-color;
+      padding: 13% 15%;
+      border-radius: 15px;
+      font-size: 1.6rem;
+      line-height: 2.0;           
+        dl{            
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        }
+      }
+    }        
+  }
+}  
+/* --------------works--------------*/ 
+.works-contents{
+  margin: 15% 0;
+  .works-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 7% 0;
+    .works-inner{
+      width: 31%;
+      margin-bottom: 7%;
+      &:hover .works-mask{
+        opacity: 1;
+        padding-top: 20%;
+      }
+      a{
+        text-decoration: none;
+        color: $gray-color;
+        div{
+          position: relative;
+          overflow: hidden;
+          img{
+            max-width: 100%;
+          }
+          .works-mask{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color:	rgba(0,0,0,0.4);
+            -webkit-transition:	all 0.6s ease;
+            transition:		all 0.6s ease;
+          }
+          .works-caption{
+            text-align: center;
+            color: #fff;
+            font-size: 2rem;
+          }     
+        }
+        p{
+          text-align: center;
+          padding-top: 5%;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+/* --------------about--------------*/
+.about-contents{
+  margin: 10% 0;
+  .about-wrap{
+     margin: 5%;
+    .about-inner{
+      position: relative;
+      .about-txt{
+        position: absolute;
+        top: 55px;
+        left: 42px;
+        z-index: 10;
+        background-color:rgba(234,160,160,0.6);
+        padding: 7% 10% 10% 7%;
+        p{
+          margin-top: 10%;
+          line-height: 1.5;
+        }
+      }
+      .about-img{
+        position: absolute;
+        top: 13%;
+        right: 5%;
+        width: 45%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  } 
+}
+/* --------------contact--------------*/
+.contact-contents{
+  margin: 80% 0 10%;
+  .contact-wrap{
+    margin: 7% 7% 25%;
+    p{
+      text-align: center;
+      margin-bottom: 10%;
+    }
+  }
+}
+
+/* --------ボタン--------*/
+  .button{
+  position: relative;
+  padding: 1em 1.5em;
+  margin: 0 auto;
+  width: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  background-color: $pink-color;
+  &::after,
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+  }
+  &::after{
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: $gray-color;
+    border-right-color: $gray-color;
+   }
+  &::before{
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: $gray-color;
+    border-left-color: $gray-color;
+  }
+  &:hover:after,
+  &:hover:before{
+    border-bottom-color: $gray-color;
+    border-right-color: $gray-color;
+    border-top-color: $gray-color;
+    border-left-color: $gray-color;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* --------------footer--------------*/
+.footer{
+  position: relative;
+  .footer-img{
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    left: -7%;
+    img{
+     width: 100%;
+     vertical-align:top;
+    }
+  }
+  p{
+    position: absolute;
+    top: 53%;
+    right: 8%;
+    font-style: italic;
+  }
+}
+
+
+/* -------------------------------------------------
+レスポンシブ対応
+----------------------------------------------------*/
+
+
+/*========= タブレット対応 ===============*/
+
+@media screen and (max-width:1024px){
+    
+/* --------------topArea--------------*/
+  .topArea{
+    display: block;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 30%;
+      top: 0;
+      left: 50%;
+      background-color: #000;
+      opacity: 0;
+      animation: heightlineAnime 3s infinite ease-in-out forwards;
+      animation-delay: 8s;
+    }
+    @keyframes heightlineAnime {
+      0%{
+        height:0;
+        top:130%;
+        opacity: 0;
+      }
+      30%{
+        height:40%;
+        opacity: 1;
+      }
+      100%{
+        height:0;
+        top:160%;
+        opacity: 0;
+      }
+    }
+  }
+
+  .topArea .topImg{
+    width: 50%;
+  }
+
+  .topArea .topTxt{
+    width: 70%;
+    padding: 3%;
+    position: absolute;
+    top: 25%;
+    left: 31%;
+    z-index: 999;
+    h1{
+      font-size: 4.0rem;
+    }
+    h2{
+      font-size: 3.5rem;
+    }
+    p{
+      font-size: 1.6rem;
+    }
+  }
+ 
+/* --------------mainArea--------------*/
+  .mainArea{
+    margin: 45% 5% 15%;
+    h2{
+      font-size: 6.0rem;
+    }
+  }
+
+/* --------------skills--------------*/
+  .skills-contents{
+    .skills-wrap{
+       margin: 12% 0 5%;
+       .skills-inner{
+        padding: 0;
+      
+        .skillsTxt{
+          h3{
+           font-size: 1.8rem;
+          }
+          p{
+           font-size: 1.1rem;
+           letter-spacing: 0.1rem;
+          }
+        }
+        .skills-detail{
+         padding: 13% 10%;
+         font-size: 1.3rem;
+        }
+      }
+    }
+  }        
+
+/* --------------works--------------*/
+  .works-contents{
+    .works-wrap{
+      .works-inner{
+        width: 45%;
+      }
+    }
+  }
+
+
+
+/* --------------about--------------*/
+.about-contents{
+  margin: 10% 0;
+  .about-wrap{
+     margin: 10% 5% 5%;
+    .about-inner{
+      position: relative;
+      .about-txt{
+        position: absolute;
+        top: 128px;
+        left: 42px;
+        z-index: 10;
+        background-color:rgba(234,160,160,0.6);
+        padding: 7% 10% 10% 7%;
+        p{
+          margin-top: 10%;
+          font-size: 1.3rem;
+          line-height: 1.5;
+        }
+      }
+      .about-img{
+        position: absolute;
+        top: 13%;
+        right: 5%;
+        width: 45%;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  } 
+}
+
+/* --------------contact--------------*/
+  .contact-contents{
+    margin: 110% 0 10%;
+    .contact-wrap{
+      margin: 10% 7% 25%;
+      p{
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .button{
+    font-size: 1.3rem;
+  }
+
+/* --------------footer--------------*/
+  .footer{
+    p{
+      font-size: 1.0rem;
+    }
+  }
+
+}
+ 
+ 
+ 
+ /*========= スマホ対応 ===============*/
+ 
+@media screen and (max-width:599px){
+
+  html{
+    // font-size: 45%;
+  }
+
+/* --------------ヘッダー--------------*/
+  .header{
+  // display: flex;
+  // flex-wrap: wrap;
+  // align-items: center;
+  // width: 86.7%;
+  // margin: 1% auto;
+    padding: 3% 0 1.5%;
+    font-size: 1.3rem;
+    .h1-wrap{
+      width: 100%;
+      padding-bottom: 3%;
+      h1{
+        width: 100%;
+    // position: relative;
+    // white-space: nowrap;
+    // letter-spacing: 0.05em;
+    // text-align: left;
+    // box-sizing: border-box;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3%;
+        bottom: 104%;
+        left: 0;
+        background-color: #000;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3%;
+        bottom: -8%;
+        left: 0;
+        background-color: #000;
+      }
+      a{
+        display: block;
+        padding: 4% 0 4% 5%;
+        text-decoration: none;
+        // margin: 0 10% 0 0;
+        color: $silverPink-color;
+        background-color: #31314C;
+        &:hover{
+          color: #fff;
+          background-color: $gray-color;
+          transition: all 0.5s 0s ease;
+        }
+      }
+    }
+  }
+/* ----ナビゲーション----*/
+.nav{
+  width: 100%;
+   }
+ }
+/* --------------topArea--------------*/
+  .topArea{
+    display: block; //flex解除
+    &::after{
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 30%;
+      top: 0;
+      left: 50%;
+      background-color: #000;
+      opacity: 0;
+      animation: heightlineAnime 3s infinite ease-in-out forwards;
+      animation-delay: 8s;
+    }
+    @keyframes heightlineAnime {
+      0%{
+        height:0;
+        top:160%;
+        opacity: 0;
+      }
+      30%{
+        height:40%;
+        opacity: 1;
+      }
+      100%{
+        height:0;
+        top:190%;
+        opacity: 0;
+      }
+    }
+  }
+
+  .topArea .topImg{
+    width: 54%;
+  }
+
+  .topArea .topTxt{
+    width: 81%;
+    padding: 3%;
+    position: absolute;
+    top: 31%;
+    left: 19%;
+    z-index: 999;
+    h1{
+      position: relative;
+      font-size: 2.5rem;
+      white-space: nowrap;
+      margin: 12% 0 0;
+      border-bottom: 2px solid #000;
+      padding: 0 0 3% 0;
+      opacity: 0;
+      animation: fadeInAnime 3s ease forwards;
+      animation-delay: 2s;
+      @keyframes fadeInAnime{
+        0% {
+          opacity: 0;
+        }      
+        100% {
+          opacity: 1;
+        }
+      }
+      .color-pink{
+        color: $pink-color;
+       }
+      &::before{
+        content: '';
+        position: absolute;
+        // width: 100%;
+        height: 1%;
+        bottom: -15%;
+        left: 0;
+        background-color: #000;
+        animation: widthlineAnime 3s linear forwards;
+        animation-delay: 2s;
+        opacity: 0;
+        @keyframes widthlineAnime {
+          0%{
+            opacity: 0;
+            width: 20%;
+          }
+          100%{
+            opacity: 1;
+            width: 100%;
+          }
+        }
+      }
+    }
+    h2{
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: 1.0rem;
+      letter-spacing: 0.02rem;
+    }
+  }
+
+  /* --------------mainArea--------------*/
+  .mainArea{
+    margin: 72% 5% 15%;
+    h2{
+      // font-family: 'Italianno', cursive;
+      // font-weight: normal;
+      font-size: 3.0rem;
+      // font-style: italic;
+      // text-align: center;
+      position: relative;
+      // &.rollAnime.roll span{
+      //   transition-property: opacity,transform;
+      //   transform: rotateY(360deg);
+      //   transition: all .8s cubic-bezier(.77,0,.175,1);
+      //   transition-timing-function: cubic-bezier(.77,0,.175,1);
+      //   display: inline-block;
+      // }
+      &::before{
+        content: '';
+        position: absolute;
+        width: 30%;
+        height: 1%;
+        bottom: 50%;
+        right: 70%;
+        background-color: #000;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 30%;
+        height: 1%;
+        bottom: 50%;
+        left: 70%;
+        background-color: #000;
+      }
+    }
+    p{
+      font-size: 1.0rem;
+    }
+  }
+
+
+
+  .skills-contents{
+    margin: 10% 0;
+  .skills-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    margin: 5%;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0%;
+      bottom: 0%;
+      left: 0%;
+      // background-color: #000;
+    }
+    .skills-inner{
+      width: 100%;
+      text-align: center;
+      padding: 3% 3% 20%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      img{
+        width: 100%;
+      }
+      .skillsTxt{
+          flex: 1;
+          margin: 7% 3%;
+        h3{
+          font-size: 1.6rem;
+        }
+        // p{
+        //   text-align: initial;
+        //   font-size: 1.6rem;
+        //   line-height: 1.8;
+        //   letter-spacing: 0.2rem;
+        //   margin: 7% 0 0 0;
+        // }
+      }
+      .skills-detail{
+        background-color:$gray-color;
+        color: $silverPink-color;
+        // padding: 13% 15%;
+        border-radius: 15px;
+        font-size: 1.0rem;
+        line-height: 2.0;           
+          dl{            
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          }
+        }
+      }        
+    }
+  }  
+
+
+  /* --------------works--------------*/ 
+  .works-contents{
+    margin: 15% 0;
+    .works-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 7% 0;
+      .works-inner{
+        width: 90%;
+        margin-bottom: 7%;
+        // &:hover .works-mask{
+        //   opacity: 1;
+        //   padding-top: 20%;
+        // }
+        // a{
+        //   text-decoration: none;
+        //   color: $gray-color;
+        //   div{
+        //     position: relative;
+        //     overflow: hidden;
+        //     img{
+        //       max-width: 100%;
+        //     }
+        //     .works-mask{
+        //       position: absolute;
+        //       left: 0;
+        //       top: 0;
+        //       width: 100%;
+        //       height: 100%;
+        //       opacity: 0;
+        //       background-color:	rgba(0,0,0,0.4);
+        //       -webkit-transition:	all 0.6s ease;
+        //       transition:		all 0.6s ease;
+        //     }
+        //     .works-caption{
+        //       text-align: center;
+        //       color: #fff;
+        //       font-size: 2rem;
+        //     }     
+        //   }
+        //   p{
+        //     text-align: center;
+        //     padding-top: 5%;
+        //     line-height: 1.5;
+        //   }
+        // }
+      }
+    }
+  }
+
+  /* --------------about--------------*/
+  .about-contents{
+    margin: 10% 0;
+    .about-wrap{
+      margin: 10% 5% 5%;
+      .about-inner{
+        position: relative;
+        .about-txt{
+          position: absolute;
+          top: 55px;
+          left: -20px;
+          z-index: 10;
+          background-color:rgba(234,160,160,0.6);
+          // padding: 0;
+          width: 100%;
+          p{
+            // margin-top: 10%;
+            font-size: 1.0rem;
+            // line-height: 1.5;
+            text-align: start;
+          }
+        }
+        .about-img{
+          position: absolute;
+          top: 13%;
+          right: 5%;
+          width: 45%;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    } 
+  }
+
+/* --------------contact--------------*/
+.contact-contents{
+  margin: 167% 0 10%;
+  .contact-wrap{
+    margin: 10% 0 25%;
+    p{
+      font-size: 0.01rem;
+    }
+  }
+}
+.button{
+
+
+    // position: relative;
+    // padding: 1em 1.5em;
+    // margin: 0 auto;
+    width: 70%;
+    // border: none;
+    // background-color: transparent;
+    // cursor: pointer;
+    // outline: none;
+    // text-align: center;
+    font-size: 1.0rem;
+    // box-sizing: border-box;
+    // background-color: $pink-color;
+}
+
+/* --------------footer--------------*/
+.footer{
+  p{
+    font-size: 0.01rem;
+  }
+}
+
+}
