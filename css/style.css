@@ -1,10 +1,4 @@
 @charset "UTF-8";
-/* -------------------------------------------------
-共通レイアウト
-----------------------------------------------------*/
-/* ---変数定義---*/
-/* ------------*/
-@import url("https://fonts.googleapis.com/css2?family=Italianno&family=MonteCarlo&family=Tangerine:wght@700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap");
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -107,6 +101,11 @@ input, select {
   vertical-align: middle;
 }
 
+/* -------------------------------------------------
+共通レイアウト
+----------------------------------------------------*/
+/* ---変数定義---*/
+/* ------------*/
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -1344,9 +1343,7 @@ body.appear .wrapper {
     margin: 72% 5% 15%;
   }
   .mainArea h2 {
-    font-family: "Noto Serif JP", serif;
     font-size: 3rem;
-    font-style: normal;
     position: relative;
   }
   .mainArea h2::before {

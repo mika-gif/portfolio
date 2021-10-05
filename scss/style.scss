@@ -12,7 +12,8 @@ $pink-color: #eaa0a0;
 
 /* ------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=MonteCarlo&family=Tangerine:wght@700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Italianno&family=MonteCarlo&family=Tangerine:wght@700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -1038,11 +1039,11 @@ body.appear .wrapper{
   .mainArea{
     margin: 72% 5% 15%;
     h2{
-      font-family: "Noto Serif JP", serif;
+      // font-family: "Noto Serif JP", serif;
       // font-family: 'Italianno', cursive;
       // font-weight: normal;
       font-size: 3.0rem;
-      font-style: normal;
+      // font-style: normal;
       // text-align: center;
       position: relative;
       // &.rollAnime.roll span{
