@@ -1344,9 +1344,8 @@ body.appear .wrapper {
     margin: 72% 5% 15%;
   }
   .mainArea h2 {
-    font-family: "Tangerine", cursive;
+    font-family: "Carattere", cursive;
     font-size: 3rem;
-    font-style: italic;
     position: relative;
   }
   .mainArea h2::before {
