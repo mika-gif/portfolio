@@ -1342,6 +1342,7 @@ body.appear .wrapper {
     margin: 72% 5% 15%;
   }
   .mainArea h2 {
+    font-family: "Tangerine", cursive;
     font-size: 3rem;
     position: relative;
   }
