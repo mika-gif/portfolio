@@ -1330,6 +1330,7 @@ body.appear .wrapper {
     }
   }
   .topArea .topTxt h2 {
+    font-family: "Italianno", cursive;
     font-size: 1.5rem;
   }
   .topArea .topTxt p {
