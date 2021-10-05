@@ -1344,8 +1344,8 @@ body.appear .wrapper {
     margin: 72% 5% 15%;
   }
   .mainArea h2 {
-    font-family: "Noto Serif JP", serif;
     font-size: 3rem;
+    font-style: normal;
     position: relative;
   }
   .mainArea h2::before {
