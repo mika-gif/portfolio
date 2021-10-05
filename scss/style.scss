@@ -1044,19 +1044,19 @@ body.appear .wrapper{
       // font-family: "Noto Serif JP", serif;
       // font-family: 'Italianno', cursive;
       // font-weight: normal;
-      // font-family: 'Tangerine', cursive;
+      font-family: 'Tangerine', cursive;
       font-size: 3.0rem;
-      // font-style: normal;
+      font-style: italic;
       // text-align: center;
       position: relative;
-      &.rollAnime.roll span{
-        // transition-property: opacity,transform;
-        // transform: rotateY(360deg);
-        // transition: all .8s cubic-bezier(.77,0,.175,1);
-        // transition-timing-function: cubic-bezier(.77,0,.175,1);
-        // display: inline-block;
-        margin: 0 0.5% 0 0.5%;
-      }
+      // &.rollAnime.roll span{
+      //   transition-property: opacity,transform;
+      //   transform: rotateY(360deg);
+      //   transition: all .8s cubic-bezier(.77,0,.175,1);
+      //   transition-timing-function: cubic-bezier(.77,0,.175,1);
+      //   display: inline-block;
+      //   margin: 0 0.5% 0 0.5%;
+      // }
       &::before{
         content: '';
         position: absolute;

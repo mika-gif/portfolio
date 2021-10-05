@@ -1344,11 +1344,10 @@ body.appear .wrapper {
     margin: 72% 5% 15%;
   }
   .mainArea h2 {
+    font-family: "Tangerine", cursive;
     font-size: 3rem;
+    font-style: italic;
     position: relative;
-  }
-  .mainArea h2.rollAnime.roll span {
-    margin: 0 0.5% 0 0.5%;
   }
   .mainArea h2::before {
     content: "";

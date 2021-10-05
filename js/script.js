@@ -124,10 +124,10 @@ $(window).on('load', function () {
     text.split('').forEach(function (t, i) {  //t=文字 i=何文字目かの数字
       if (t !== " ") {
         if (i < 10) {
-          textbox += '<span>' + t + '</span>';
+          textbox += '<span style="transition-delay:.' + i + 's;">' + t + '</span>';
         } else {
           var n = i / 10;
-          textbox += '<span>' + t + '</span>';
+          textbox += '<span style="transition-delay:' + n + 's;">' + t + '</span>';
         }
       } else {
         textbox += t;
