@@ -20,7 +20,8 @@ html {
   font-size: 62.5%; //10px
   body {
     font-size: 1.6em; //16px
-    font-family: "Noto Serif JP", serif;
+    // font-family: "Noto Serif JP", serif;
+    font-family: 'Shippori Mincho', serif;
     color: $gray-color;
     .wrapper{
       width: 90%;
@@ -415,8 +416,12 @@ body.appear .wrapper{
           opacity: 1;
         }
       }
-      .space{
-      padding: 0 10%;
+      // .space{
+      // padding: 0 10%;
+      // }
+      .h2-english{
+        font-family: 'Italianno', cursive;
+        font-size: 2.0rem;
       }
     }
     p{
@@ -956,7 +961,7 @@ body.appear .wrapper{
     @keyframes heightlineAnime {
       0%{
         height:0;
-        top:160%;
+        top:250%;
         opacity: 0;
       }
       30%{
@@ -965,26 +970,50 @@ body.appear .wrapper{
       }
       100%{
         height:0;
-        top:190%;
+        top:280%;
         opacity: 0;
       }
     }
   }
 
-  .topArea .topImg{
-    width: 54%;
+  .topArea{ 
+    .topImg{
+      width: 54%;
+      .shadowBox{
+        position: absolute;
+        top: 9%;
+        left: 6%;
+        width: 90%;
+        height: 95%;
+        opacity: 0.3;
+        background-color: $gray-color;
+        border-radius: 2% 2% 68% 2%;
+        z-index: -1;
+        animation: shadowAnime 3s forwards;
+        animation-delay: 1s;
+      } 
+      @keyframes shadowAnime {
+        0% {
+        transform: translateX(0px);
+        }
+      
+        100% {
+        transform: translateX(20%);
+        }
+      }   
+    }
   }
 
   .topArea .topTxt{
-    width: 81%;
+    width: 100%;
     padding: 3%;
     position: absolute;
-    top: 31%;
-    left: 19%;
+    top: 61%;
+    left: 0;
     z-index: 999;
     h1{
       position: relative;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       white-space: nowrap;
       margin: 12% 0 0;
       border-bottom: 2px solid #000;
@@ -1027,41 +1056,26 @@ body.appear .wrapper{
       }
     }
     h2{
-      font-family: 'Italianno', cursive;
+      // font-family: 'Italianno', cursive;
       letter-spacing: 0;
-      font-size: 1.5rem;
+      font-size: 2.5rem;
+      .h2-english{
+        font-size: 1.8rem;
+      }
     }
     p{
-      font-size: 1.0rem;
+      font-size: 1.3rem;
       letter-spacing: 0.02rem;
     }
   }
 
   /* --------------mainArea--------------*/
   .mainArea{
-    margin: 72% 5% 15%;
+    margin: 133% 5% 15%;
     h2{
-      // font-family: "Noto Serif JP", serif;
-      // font-family: 'Italianno', cursive;
-      // font-weight: normal;
-      // font-family: 'Tangerine', cursive;
-      // font-family: 'Dynalight', cursive;
-      // font-family: 'Playball', cursive;
-      // font-family: 'Fredericka the Great', cursive;
-      // font-family: 'Carattere', cursive;
-      font-family: 'Stalemate', cursive;
+      font-family: 'Stalemate', cursive; //iPhpne斜体文字が回転しないため対応
       font-size: 3.0rem;
-      // font-style: italic;
-      // text-align: center;
       position: relative;
-      // &.rollAnime.roll span{
-      //   transition-property: opacity,transform;
-      //   transform: rotateY(360deg);
-      //   transition: all .8s cubic-bezier(.77,0,.175,1);
-      //   transition-timing-function: cubic-bezier(.77,0,.175,1);
-      //   display: inline-block;
-      //   margin: 0 0.5% 0 0.5%;
-      // }
       &::before{
         content: '';
         position: absolute;

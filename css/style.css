@@ -112,7 +112,7 @@ html {
 }
 html body {
   font-size: 1.6em;
-  font-family: "Noto Serif JP", serif;
+  font-family: "Shippori Mincho", serif;
   color: #313131;
 }
 html body .wrapper {
@@ -659,8 +659,9 @@ body.appear .wrapper {
     opacity: 1;
   }
 }
-.topArea .topTxt h2 .space {
-  padding: 0 10%;
+.topArea .topTxt h2 .h2-english {
+  font-family: "Italianno", cursive;
+  font-size: 2rem;
 }
 .topArea .topTxt p {
   font-size: 2rem;
@@ -1222,7 +1223,7 @@ body.appear .wrapper {
   @-webkit-keyframes heightlineAnime {
     0% {
       height: 0;
-      top: 160%;
+      top: 250%;
       opacity: 0;
     }
     30% {
@@ -1231,14 +1232,14 @@ body.appear .wrapper {
     }
     100% {
       height: 0;
-      top: 190%;
+      top: 280%;
       opacity: 0;
     }
   }
   @keyframes heightlineAnime {
     0% {
       height: 0;
-      top: 160%;
+      top: 250%;
       opacity: 0;
     }
     30% {
@@ -1247,7 +1248,7 @@ body.appear .wrapper {
     }
     100% {
       height: 0;
-      top: 190%;
+      top: 280%;
       opacity: 0;
     }
   }
@@ -1255,18 +1256,53 @@ body.appear .wrapper {
   .topArea .topImg {
     width: 54%;
   }
+  .topArea .topImg .shadowBox {
+    position: absolute;
+    top: 9%;
+    left: 6%;
+    width: 90%;
+    height: 95%;
+    opacity: 0.3;
+    background-color: #313131;
+    border-radius: 2% 2% 68% 2%;
+    z-index: -1;
+    -webkit-animation: shadowAnime 3s forwards;
+            animation: shadowAnime 3s forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  @-webkit-keyframes shadowAnime {
+    0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(20%);
+              transform: translateX(20%);
+    }
+  }
+  @keyframes shadowAnime {
+    0% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    100% {
+      -webkit-transform: translateX(20%);
+              transform: translateX(20%);
+    }
+  }
 
   .topArea .topTxt {
-    width: 81%;
+    width: 100%;
     padding: 3%;
     position: absolute;
-    top: 31%;
-    left: 19%;
+    top: 61%;
+    left: 0;
     z-index: 999;
   }
   .topArea .topTxt h1 {
     position: relative;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     white-space: nowrap;
     margin: 12% 0 0;
     border-bottom: 2px solid #000;
@@ -1330,18 +1366,20 @@ body.appear .wrapper {
     }
   }
   .topArea .topTxt h2 {
-    font-family: "Italianno", cursive;
     letter-spacing: 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+  }
+  .topArea .topTxt h2 .h2-english {
+    font-size: 1.8rem;
   }
   .topArea .topTxt p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: 0.02rem;
   }
 
   /* --------------mainArea--------------*/
   .mainArea {
-    margin: 72% 5% 15%;
+    margin: 133% 5% 15%;
   }
   .mainArea h2 {
     font-family: "Stalemate", cursive;
