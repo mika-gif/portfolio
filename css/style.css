@@ -718,23 +718,20 @@ body.appear .wrapper {
           transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   display: inline-block;
 }
-.mainArea h2::before {
+.mainArea h2::before, .mainArea h2::after {
   content: "";
   position: absolute;
-  width: 40%;
-  height: 1%;
+  width: 38%;
+  height: 3%;
   bottom: 50%;
-  right: 60%;
-  background-color: #000;
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
+.mainArea h2::before {
+  left: 0;
 }
 .mainArea h2::after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 1%;
-  bottom: 50%;
-  left: 60%;
-  background-color: #000;
+  right: 0;
 }
 .mainArea p {
   text-align: center;
@@ -1383,27 +1380,23 @@ body.appear .wrapper {
   }
   .mainArea h2 {
     font-family: "Stalemate", cursive;
-    font-size: 3rem;
-    font-weight: bold;
+    font-size: 3.5rem;
     position: relative;
   }
-  .mainArea h2::before {
+  .mainArea h2::before, .mainArea h2::after {
     content: "";
     position: absolute;
-    width: 30%;
-    height: 1%;
+    width: 35%;
+    height: 4%;
     bottom: 50%;
-    right: 70%;
-    background-color: #000;
+    border-top: solid 1.8px #000;
+    border-bottom: solid 1.8px #000;
+  }
+  .mainArea h2::before {
+    left: 0;
   }
   .mainArea h2::after {
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 1%;
-    bottom: 50%;
-    left: 70%;
-    background-color: #000;
+    right: 0;
   }
   .mainArea p {
     font-size: 1rem;
@@ -1536,7 +1529,7 @@ body.appear .wrapper {
     margin: 10% 0 25%;
   }
   .contact-contents .contact-wrap p {
-    font-size: 0.01rem;
+    font-size: 1.3rem;
   }
 
   .button {

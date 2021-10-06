@@ -452,11 +452,13 @@ body.appear .wrapper{
 .mainArea{
   margin: 15% 5%;
     h2{
+      // display: inline-block;
       font-family: 'Italianno', cursive;
       font-weight: normal;
       font-size: 8.0rem;
       // font-style: italic;
       text-align: center;
+      // padding: 0 40%;
       position: relative;
       &.rollAnime.roll span{
         transition-property: opacity,transform;
@@ -465,23 +467,21 @@ body.appear .wrapper{
         transition-timing-function: cubic-bezier(.77,0,.175,1);
         display: inline-block;
       }
-      &::before{
-        content: '';
-        position: absolute;
-        width: 40%;
-        height: 1%;
-        bottom: 50%;
-        right: 60%;
-        background-color: #000;
-      }
+      &::before,
       &::after{
         content: '';
         position: absolute;
-        width: 40%;
-        height: 1%;
+        width: 38%;
+        height: 3%;
         bottom: 50%;
-        left: 60%;
-        background-color: #000;
+        border-top: solid 1px #000;
+        border-bottom: solid 1px #000;
+      }
+      &::before{
+        left: 0;
+      }
+      &::after{
+        right: 0;
       }
     }
      p{
@@ -1073,26 +1073,24 @@ body.appear .wrapper{
     margin: 133% 5% 15%;
     h2{
       font-family: 'Stalemate', cursive; //iPhpne斜体文字が回転しないため対応
-      font-size: 3.0rem;
-      font-weight: bold;
+      font-size: 3.5rem;
+      // font-weight: bold;
       position: relative;
-      &::before{
-        content: '';
-        position: absolute;
-        width: 30%;
-        height: 1%;
-        bottom: 50%;
-        right: 70%;
-        background-color: #000;
-      }
+      &::before,
       &::after{
         content: '';
         position: absolute;
-        width: 30%;
-        height: 1%;
+        width: 35%;
+        height: 4%;
         bottom: 50%;
-        left: 70%;
-        background-color: #000;
+        border-top: solid 1.8px #000;
+        border-bottom: solid 1.8px #000;
+      }
+      &::before{
+        left: 0;
+      }
+      &::after{
+        right: 0;
       }
     }
     p{
@@ -1253,7 +1251,7 @@ body.appear .wrapper{
   .contact-wrap{
     margin: 10% 0 25%;
     p{
-      font-size: 0.01rem;
+      font-size: 1.3rem;
     }
   }
 }
