@@ -382,7 +382,7 @@ body.appear .wrapper{
         content: '';
         position: absolute;
         // width: 100%;
-        height: 1%;
+        height: 1px;
         bottom: -8%;
         left: 0;
         background-color: #000;
@@ -1073,7 +1073,7 @@ body.appear .wrapper{
     margin: 133% 5% 15%;
     h2{
       font-family: 'Stalemate', cursive; //iPhpne斜体文字が回転しないため対応
-      font-size: 3.5rem;
+      font-size: 4.0rem;
       // font-weight: bold;
       position: relative;
       &::before,
@@ -1083,7 +1083,7 @@ body.appear .wrapper{
         width: 35%;
         height: 4%;
         bottom: 50%;
-        border-top: solid 1.8px #000;
+        border-top: solid 1.2px #000;
         border-bottom: solid 1.8px #000;
       }
       &::before{
@@ -1251,7 +1251,7 @@ body.appear .wrapper{
   .contact-wrap{
     margin: 10% 0 25%;
     p{
-      font-size: 1.3rem;
+      font-size: 1.0rem;
     }
   }
 }
