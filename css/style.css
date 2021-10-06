@@ -913,7 +913,7 @@ body.appear .wrapper {
 }
 .contact-contents .contact-wrap p {
   text-align: center;
-  margin-bottom: 10%;
+  margin: 10% 0;
 }
 
 /* --------ボタン--------*/
@@ -1086,7 +1086,7 @@ body.appear .wrapper {
     font-size: 1.8rem;
   }
   .skills-contents .skills-wrap .skills-inner .skillsTxt p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     letter-spacing: 0.1rem;
   }
   .skills-contents .skills-wrap .skills-inner .skills-detail {
@@ -1384,6 +1384,7 @@ body.appear .wrapper {
   .mainArea h2 {
     font-family: "Stalemate", cursive;
     font-size: 3rem;
+    font-weight: bold;
     position: relative;
   }
   .mainArea h2::before {

@@ -635,7 +635,7 @@ body.appear .wrapper{
     margin: 7% 7% 25%;
     p{
       text-align: center;
-      margin-bottom: 10%;
+      margin: 10% 0;
     }
   }
 }
@@ -791,13 +791,12 @@ body.appear .wrapper{
        margin: 12% 0 5%;
        .skills-inner{
         padding: 0;
-      
         .skillsTxt{
           h3{
            font-size: 1.8rem;
           }
           p{
-           font-size: 1.1rem;
+           font-size: 1.3rem;
            letter-spacing: 0.1rem;
           }
         }
@@ -1075,6 +1074,7 @@ body.appear .wrapper{
     h2{
       font-family: 'Stalemate', cursive; //iPhpne斜体文字が回転しないため対応
       font-size: 3.0rem;
+      font-weight: bold;
       position: relative;
       &::before{
         content: '';
