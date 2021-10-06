@@ -891,6 +891,8 @@ body.appear .wrapper {
 .about-contents .about-wrap .about-inner .about-txt p {
   margin-top: 10%;
   line-height: 1.5;
+  white-space: pre-line;
+  text-align: start;
 }
 .about-contents .about-wrap .about-inner .about-img {
   position: absolute;
@@ -1116,9 +1118,7 @@ body.appear .wrapper {
     padding: 7% 10% 10% 7%;
   }
   .about-contents .about-wrap .about-inner .about-txt p {
-    margin-top: 10%;
     font-size: 1.3rem;
-    line-height: 1.5;
   }
   .about-contents .about-wrap .about-inner .about-img {
     position: absolute;
@@ -1333,7 +1333,7 @@ body.appear .wrapper {
   .topArea .topTxt h1::before {
     content: "";
     position: absolute;
-    height: 1%;
+    height: 1.6px;
     bottom: -15%;
     left: 0;
     background-color: #000;
@@ -1369,6 +1369,7 @@ body.appear .wrapper {
   }
   .topArea .topTxt h2 .h2-english {
     font-size: 1.8rem;
+    font-weight: unset;
   }
   .topArea .topTxt p {
     font-size: 1.3rem;
@@ -1387,7 +1388,7 @@ body.appear .wrapper {
   .mainArea h2::before, .mainArea h2::after {
     content: "";
     position: absolute;
-    width: 35%;
+    width: 28%;
     height: 4%;
     bottom: 50%;
     border-top: solid 1.2px #000;
@@ -1483,6 +1484,9 @@ body.appear .wrapper {
     width: 90%;
     margin-bottom: 7%;
   }
+  .works-contents .works-wrap .works-inner p {
+    font-size: 1.5rem;
+  }
 
   /* --------------about--------------*/
   .about-contents {
@@ -1503,8 +1507,7 @@ body.appear .wrapper {
     width: 100%;
   }
   .about-contents .about-wrap .about-inner .about-txt p {
-    font-size: 1rem;
-    text-align: start;
+    font-size: 1.2rem;
   }
   .about-contents .about-wrap .about-inner .about-img {
     position: absolute;
@@ -1518,7 +1521,7 @@ body.appear .wrapper {
 
   /* --------------contact--------------*/
   .contact-contents {
-    margin: 167% 0 10%;
+    margin: 555px 0 10%;
   }
   .contact-contents .contact-wrap {
     margin: 10% 0 25%;
