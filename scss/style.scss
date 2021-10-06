@@ -382,7 +382,7 @@ body.appear .wrapper{
         content: '';
         position: absolute;
         // width: 100%;
-        height: 1px;
+        height: 1.6px;
         bottom: -8%;
         left: 0;
         background-color: #000;
@@ -421,7 +421,8 @@ body.appear .wrapper{
       // }
       .h2-english{
         font-family: 'Italianno', cursive;
-        font-size: 2.0rem;
+        font-size: 3.0rem;
+        font-weight: initial;
       }
     }
     p{
@@ -1073,7 +1074,7 @@ body.appear .wrapper{
     margin: 133% 5% 15%;
     h2{
       font-family: 'Stalemate', cursive; //iPhpne斜体文字が回転しないため対応
-      font-size: 4.0rem;
+      font-size: 5.0rem;
       // font-weight: bold;
       position: relative;
       &::before,
@@ -1146,12 +1147,14 @@ body.appear .wrapper{
         color: $silverPink-color;
         // padding: 13% 15%;
         border-radius: 15px;
-        font-size: 1.0rem;
+        font-size: 1.6rem;
         line-height: 2.0;           
           dl{            
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
+          // display: flex;
+          // flex-wrap: wrap;
+          // justify-content: space-between;
+          display: block;
+          text-align: center;
           }
         }
       }        

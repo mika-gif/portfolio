@@ -604,7 +604,7 @@ body.appear .wrapper {
 .topArea .topTxt h1::before {
   content: "";
   position: absolute;
-  height: 1px;
+  height: 1.6px;
   bottom: -8%;
   left: 0;
   background-color: #000;
@@ -661,7 +661,8 @@ body.appear .wrapper {
 }
 .topArea .topTxt h2 .h2-english {
   font-family: "Italianno", cursive;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: initial;
 }
 .topArea .topTxt p {
   font-size: 2rem;
@@ -1380,7 +1381,7 @@ body.appear .wrapper {
   }
   .mainArea h2 {
     font-family: "Stalemate", cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     position: relative;
   }
   .mainArea h2::before, .mainArea h2::after {
@@ -1455,18 +1456,12 @@ body.appear .wrapper {
     background-color: #313131;
     color: #f0e8ec;
     border-radius: 15px;
-    font-size: 1rem;
+    font-size: 1.6rem;
     line-height: 2;
   }
   .skills-contents .skills-wrap .skills-inner .skills-detail dl {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: block;
+    text-align: center;
   }
 
   /* --------------works--------------*/
