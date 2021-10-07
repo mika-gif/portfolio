@@ -149,6 +149,7 @@ function RollAnimeControl() {
         $(this).css("transition-delay", "0s");//子要素にcsstransition-delayの秒を0とする
       });
       $(this).removeClass("roll");//rollというアニメーションクラスを除去
+      $(this).removeClass("pink");
     }
   });
 }
@@ -169,10 +170,10 @@ $(window).on('load', function () {
     text.split('').forEach(function (t, i) {  //t=文字 i=何文字目かの数字
       if (t !== " ") {
         if (i < 10) {
-          textbox += '<span style="transition-delay:.' + i + 's;">' + t + '</span>';
+          textbox += '<span>' + t + '</span>';
         } else {
           var n = i / 10;
-          textbox += '<span style="transition-delay:' + n + 's;">' + t + '</span>';
+          textbox += '<span>' + t + '</span>';
         }
       } else {
         textbox += t;
