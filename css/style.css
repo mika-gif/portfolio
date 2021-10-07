@@ -366,51 +366,21 @@ body.appear .wrapper {
 }
 /*========= スクロール時ふわっと表示させるCSS ===============*/
 /* 下から上へふわっと表示 */
-.fadeUp {
-  -webkit-animation-name: fadeUpAnime;
-          animation-name: fadeUpAnime;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
+/* ----------パターン2：下からふわっと---------- */
+/* 画面外 */
+.fade-block2 {
   opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 1.3s ease;
+  transition: all 1.3s ease;
 }
 
-@-webkit-keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-/* スクロールをしたら出現する要素にはじめに透過0を指定*/
-.delay {
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-}
-
-.fadeUpTrigger {
-  opacity: 0;
+/* 画面に入った時の動き */
+.fade-block2.blockIn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 /* --------------ヘッダー--------------*/
