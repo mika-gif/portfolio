@@ -172,6 +172,8 @@ body.appear .splashbg {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 @-webkit-keyframes pageAnime {
@@ -240,6 +242,8 @@ body.appear .wrapper {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 @-webkit-keyframes pageAnimeAppear {
@@ -259,6 +263,7 @@ body.appear .wrapper {
     opacity: 1;
   }
 }
+/*========= タイピングのためのCSS ===============*/
 .TextTyping span {
   display: none;
 }
