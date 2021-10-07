@@ -41,14 +41,28 @@ html {
 	background: #333;
 	z-index: 9999999;
 	text-align:center;
-	color:#fff;
-}
-
-#splash-logo {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  #splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .splash-font{
+    font-size: 7.0rem;
+    font-family: 'Italianno', cursive;
+    // white-space: pre-wrap;
+    color: $silverPink-color;
+    border: thick double $silverPink-color;
+    padding: 5% 0;
+    width: 90%;
+  }
+  .br-sp{
+    display: none;
+  }
+  .color-pink{
+    color: $pink-color;
+   
+  }
 }
 /*========= 画面遷移のためのCSS ===============*/
 
@@ -331,8 +345,8 @@ body.appear .wrapper{
       content: '';
       position: absolute;
       width: 100%;
-      height: 3%;
-      bottom: 104%;
+      height: 4%;
+      bottom: 106%;
       left: 0;
       background-color: #000;
     }
@@ -1039,6 +1053,14 @@ body.appear .wrapper{
     }
   }
 
+  #splash{
+    .splash-font{
+      font-size: 6.0rem;
+    }
+    .br-sp{
+      display: block;
+    }
+  }
 
 /* --------------ヘッダー--------------*/
   .header{

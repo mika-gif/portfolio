@@ -123,7 +123,7 @@ $(window).on('load', function () {
 // rollAnimeにrollというクラス名を付ける定義
 function RollAnimeControl() {
   $('.rollAnime').each(function () {
-    var elemPos = $(this).offset().top - 50;
+    var elemPos = $(this).offset().top;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     var childs = $(this).children();  //rollAnimeの子要素を取得
@@ -195,7 +195,7 @@ function fadeAnime() {
 
   // ふわっ
   $('.fadeUpTrigger').each(function () { //fadeUpTriggerというクラス名が
-    var elemPos = $(this).offset().top - 50;//要素より、50px上の
+    var elemPos = $(this).offset().top;//要素より、50px上の
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight) {
