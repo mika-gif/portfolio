@@ -12,8 +12,6 @@ $pink-color: #eaa0a0;
 
 /* ------------*/
 
-// @import url('https://fonts.googleapis.com/css2?family=Italianno&family=MonteCarlo&family=Tangerine:wght@700&family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -884,17 +882,114 @@ body.appear .wrapper{
  
 @media screen and (max-width:599px){
 
-  // html{
-  //   font-size: 45%;
-  // }
+  /*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: $gray-color;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+  display: block;
+  content: "";
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  background-color: $gray-color;/*伸びる背景色の設定*/
+  animation-name:pageAnime;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes pageAnime{
+  0% {
+    transform-origin:top;
+    transform:scaleY(0);
+  }
+  50% {
+    transform-origin:top;
+    transform:scaleY(1);
+  }
+  50.001% {
+    transform-origin:bottom;
+  }
+  100% {
+    transform-origin:bottom;
+    transform:scaleY(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+.wrapper{
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .wrapper{
+  animation-name:pageAnimeAppear;
+  animation-duration:1s;
+  animation-delay: 0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes pageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+.TextTyping span {
+	display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+ 	content: "|";
+	animation: typingAnime .8s ease infinite;
+}
+
+@keyframes typingAnime{
+	from{
+    opacity:0
+  }
+	to{
+    opacity:1
+  }
+}
 
 /* --------------ヘッダー--------------*/
   .header{
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: center;
-  // width: 86.7%;
-  // margin: 1% auto;
     padding: 3% 0 1.5%;
     font-size: 1.3rem;
     .h1-wrap{
@@ -902,11 +997,6 @@ body.appear .wrapper{
       padding-bottom: 3%;
       h1{
         width: 100%;
-    // position: relative;
-    // white-space: nowrap;
-    // letter-spacing: 0.05em;
-    // text-align: left;
-    // box-sizing: border-box;
       &::before{
         content: '';
         position: absolute;
@@ -929,7 +1019,6 @@ body.appear .wrapper{
         display: block;
         padding: 4% 0 4% 5%;
         text-decoration: none;
-        // margin: 0 10% 0 0;
         color: $silverPink-color;
         background-color: #31314C;
         &:hover{
