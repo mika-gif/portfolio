@@ -134,6 +134,8 @@ html body .wrapper {
   z-index: 9999999;
   text-align: center;
   color: #fff;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 #splash-logo {
@@ -148,6 +150,8 @@ html body .wrapper {
 /*画面遷移アニメーション*/
 .splashbg {
   display: none;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 /*bodyにappearクラスがついたら出現*/
@@ -172,8 +176,6 @@ body.appear .splashbg {
           animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-perspective: 1000;
-          perspective: 1000;
 }
 
 @-webkit-keyframes pageAnime {
@@ -229,6 +231,8 @@ body.appear .splashbg {
 .wrapper {
   opacity: 0;
   /*はじめは透過0に*/
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 
 /*bodyにappearクラスがついたら出現*/

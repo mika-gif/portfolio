@@ -41,6 +41,7 @@ html {
   z-index: 9999999;
   text-align:center;
   color:#fff;
+  perspective: 1000; //正の値
 }
 
 #splash-logo {
@@ -58,6 +59,7 @@ html {
 /*画面遷移アニメーション*/
 .splashbg{
     display: none;
+    perspective: 1000; //正の値
 }
 
 /*bodyにappearクラスがついたら出現*/
@@ -76,7 +78,6 @@ body.appear .splashbg{
   animation-duration:1.2s;
   animation-timing-function:ease-in-out;
   animation-fill-mode:forwards;
-  perspective: 1000; //正の値
 }
 
 @keyframes pageAnime{
@@ -100,6 +101,7 @@ body.appear .splashbg{
 /*画面遷移の後現れるコンテンツ設定*/
 .wrapper{
   opacity: 0;/*はじめは透過0に*/
+  perspective: 1000; //正の値
 }
 
 /*bodyにappearクラスがついたら出現*/
