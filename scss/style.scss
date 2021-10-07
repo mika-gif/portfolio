@@ -59,7 +59,6 @@ html {
 /*画面遷移アニメーション*/
 .splashbg{
     display: none;
-    perspective: 1000; //正の値
 }
 
 /*bodyにappearクラスがついたら出現*/
@@ -69,7 +68,8 @@ body.appear .splashbg{
   position:fixed;
   z-index: 999;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   transform: scaleY(0);
@@ -101,7 +101,6 @@ body.appear .splashbg{
 /*画面遷移の後現れるコンテンツ設定*/
 .wrapper{
   opacity: 0;/*はじめは透過0に*/
-  perspective: 1000; //正の値
 }
 
 /*bodyにappearクラスがついたら出現*/
@@ -111,7 +110,6 @@ body.appear .wrapper{
   animation-delay: 0.8s;
   animation-fill-mode:forwards;
   opacity: 0;
-  perspective: 1000; //正の値
 }
 
 @keyframes pageAnimeAppear{

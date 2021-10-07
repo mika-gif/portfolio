@@ -150,8 +150,6 @@ html body .wrapper {
 /*画面遷移アニメーション*/
 .splashbg {
   display: none;
-  -webkit-perspective: 1000;
-          perspective: 1000;
 }
 
 /*bodyにappearクラスがついたら出現*/
@@ -161,7 +159,7 @@ body.appear .splashbg {
   position: fixed;
   z-index: 999;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   top: 0;
   left: 0;
   -webkit-transform: scaleY(0);
@@ -231,8 +229,6 @@ body.appear .splashbg {
 .wrapper {
   opacity: 0;
   /*はじめは透過0に*/
-  -webkit-perspective: 1000;
-          perspective: 1000;
 }
 
 /*bodyにappearクラスがついたら出現*/
@@ -246,8 +242,6 @@ body.appear .wrapper {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-  -webkit-perspective: 1000;
-          perspective: 1000;
 }
 
 @-webkit-keyframes pageAnimeAppear {
