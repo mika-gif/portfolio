@@ -59,6 +59,8 @@ html {
 /*画面遷移アニメーション*/
 .splashbg{
     display: none;
+    perspective: 1000;
+    backface-visibility: hidden;
 }
 
 /*bodyにappearクラスがついたら出現*/

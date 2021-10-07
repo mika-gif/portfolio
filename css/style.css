@@ -150,6 +150,10 @@ html body .wrapper {
 /*画面遷移アニメーション*/
 .splashbg {
   display: none;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 /*bodyにappearクラスがついたら出現*/
