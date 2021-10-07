@@ -331,7 +331,7 @@ body.appear .wrapper{
 .fade-block2 {
   opacity: 0;
   transform: translateY(100px);
-  transition: all 1.3s ease;
+  transition: all 1.3s ease-in-out;
 }
 /* 画面に入った時の動き */
 .fade-block2.blockIn {
