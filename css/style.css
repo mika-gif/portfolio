@@ -125,7 +125,7 @@ html body .wrapper {
   border-radius: 0 0 138px 40px;
 }
 
-/*========= ローディング画面のためのCSS ===============*/
+/*========= ロード画面フォント設定 ===============*/
 #splash {
   position: fixed;
   width: 100%;
@@ -156,7 +156,7 @@ html body .wrapper {
   color: #eaa0a0;
 }
 
-/*========= 画面遷移のためのCSS ===============*/
+/*========= ロード画面中央から左右画面遷移 ===============*/
 body {
   background: #333;
   /*遷移アニメーションと同じ色を指定*/
@@ -199,7 +199,6 @@ body.appear .splashbg1 {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   background-color: #333;
-  /*伸びる背景色の設定*/
 }
 
 @-webkit-keyframes PageAnime {
@@ -259,7 +258,6 @@ body.appear .splashbg2 {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   background-color: #333;
-  /*伸びる背景色の設定*/
 }
 
 @-webkit-keyframes PageAnime2 {
@@ -333,9 +331,7 @@ body.appear .wrapper {
     opacity: 1;
   }
 }
-/*========= ローディング画面のためのCSS ===============*/
-/*========= 画面遷移のためのCSS ===============*/
-/*========= タイピングのためのCSS ===============*/
+/*========= topArea h2 タイピング ===============*/
 .TextTyping span {
   display: none;
 }
@@ -364,7 +360,7 @@ body.appear .wrapper {
     opacity: 1;
   }
 }
-/*========= スクロール時ふわっと表示させるCSS ===============*/
+/*========= スクロール時ふわっと表示させる ===============*/
 /* 下から上へふわっと表示 */
 .fadeUp {
   -webkit-animation-name: fadeUpAnime;
@@ -375,8 +371,6 @@ body.appear .wrapper {
           animation-duration: 1.3s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
   opacity: 0;
 }
 
@@ -405,17 +399,17 @@ body.appear .wrapper {
             transform: translateY(0);
   }
 }
-/* スクロールをしたら出現する要素にはじめに透過0を指定*/
 .delay {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
 }
 
+/* スクロールをしたら出現する要素にはじめに透過0を指定*/
 .fadeUpTrigger {
   opacity: 0;
 }
 
-/* --------------ヘッダー--------------*/
+/*=================== header ======================*/
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,7 +423,7 @@ body.appear .wrapper {
   margin: 1% auto;
   padding: 1.5% 0;
   font-size: 2rem;
-  /* ----ナビゲーション----*/
+  /*=================== nav ======================*/
 }
 .header .h1-wrap {
   width: 50%;
@@ -524,7 +518,7 @@ body.appear .wrapper {
   transition: all 0.5s 0s ease;
 }
 
-/* --------------コンテナ--------------*/
+/*=================== container ======================*/
 .container {
   width: 86.7%;
   max-width: 1729px;
@@ -533,7 +527,7 @@ body.appear .wrapper {
   border: 1px solid #000;
 }
 
-/* --------------トップエリア--------------*/
+/*=================== topArea ======================*/
 .topArea {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -769,7 +763,7 @@ body.appear .wrapper {
   }
 }
 
-/* --------------メインエリア--------------*/
+/*=================== mainArea ======================*/
 .pink {
   color: #eaa0a0;
 }
@@ -816,7 +810,7 @@ body.appear .wrapper {
   text-align: center;
 }
 
-/* --------------skills--------------*/
+/*=================== skills ======================*/
 .skills-contents {
   margin: 10% 0;
 }
@@ -893,7 +887,7 @@ body.appear .wrapper {
           justify-content: space-between;
 }
 
-/* --------------works--------------*/
+/*=================== works ======================*/
 .works-contents {
   margin: 15% 0;
 }
@@ -948,7 +942,7 @@ body.appear .wrapper {
   line-height: 1.5;
 }
 
-/* --------------about--------------*/
+/*=================== about ======================*/
 .about-contents {
   margin: 10% 0;
 }
@@ -984,7 +978,7 @@ body.appear .wrapper {
   width: 100%;
 }
 
-/* --------------contact--------------*/
+/*=================== contact ======================*/
 .contact-contents {
   margin: 100% 0 10%;
 }
@@ -1000,7 +994,7 @@ body.appear .wrapper {
   display: none;
 }
 
-/* --------ボタン--------*/
+/* --------contact me ボタン--------*/
 .button {
   position: relative;
   padding: 1em 1.5em;
@@ -1052,7 +1046,7 @@ body.appear .wrapper {
   height: 100%;
 }
 
-/* --------------footer--------------*/
+/*=================== footer ======================*/
 .footer {
   position: relative;
 }
@@ -1073,10 +1067,10 @@ body.appear .wrapper {
   font-style: italic;
 }
 
-/* -------------------------------------------------
+/* -------------------------------------------------------------------
 レスポンシブ対応
-----------------------------------------------------*/
-/*========= タブレット対応 ===============*/
+----------------------------------------------------------------------*/
+/*================== タブレット対応 ========================*/
 @media screen and (max-width: 1024px) {
   html body .wrapper {
     border-radius: 0 0 81px 40px;
@@ -1238,7 +1232,7 @@ body.appear .wrapper {
     font-size: 1rem;
   }
 }
-/*========= スマホ対応 ===============*/
+/*======================= スマホ対応 ===========================*/
 @media screen and (max-width: 599px) {
   html body .wrapper {
     border-radius: 0 0 40px 40px;
@@ -1251,11 +1245,11 @@ body.appear .wrapper {
     display: block;
   }
 
-  /* --------------ヘッダー--------------*/
+  /* --------------header--------------*/
   .header {
     padding: 3% 0 1.5%;
     font-size: 1.3rem;
-    /* ----ナビゲーション----*/
+    /* --------nav--------*/
   }
   .header .h1-wrap {
     width: 100%;
@@ -1265,43 +1259,21 @@ body.appear .wrapper {
     width: 100%;
   }
   .header .h1-wrap h1::before {
-    content: "";
-    position: absolute;
-    width: 100%;
     height: 3%;
     bottom: 104%;
-    left: 0;
-    background-color: #000;
   }
   .header .h1-wrap h1::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3%;
     bottom: -8%;
-    left: 0;
-    background-color: #000;
-  }
-  .header .h1-wrap h1 a {
-    display: block;
-    padding: 4% 0 4% 5%;
-    text-decoration: none;
-    color: #f0e8ec;
-    background-color: #31314C;
-  }
-  .header .h1-wrap h1 a:hover {
-    color: #fff;
-    background-color: #313131;
-    -webkit-transition: all 0.5s 0s ease;
-    transition: all 0.5s 0s ease;
   }
   .header .nav {
     width: 100%;
   }
 
-  /* --------------topArea--------------*/
+  /* ------------------topArea-----------------*/
   .topArea {
     display: block;
+    /* --------topImg--------*/
+    /* --------topTxt--------*/
   }
   .topArea::after {
     content: "";
@@ -1349,7 +1321,6 @@ body.appear .wrapper {
       opacity: 0;
     }
   }
-
   .topArea .topImg {
     width: 54%;
   }
@@ -1388,83 +1359,22 @@ body.appear .wrapper {
               transform: translateX(20%);
     }
   }
-
   .topArea .topTxt {
     width: 100%;
     padding: 3%;
-    position: absolute;
     top: 61%;
     left: 0;
-    z-index: 999;
   }
   .topArea .topTxt h1 {
     position: relative;
     font-size: 3.5rem;
-    white-space: nowrap;
     text-shadow: -2px 0px 1px azure;
-    margin: 12% 0 0;
-    border-bottom: 2px solid #000;
-    padding: 0 0 3% 0;
-    opacity: 0;
-    -webkit-animation: fadeInAnime 3s ease forwards;
-            animation: fadeInAnime 3s ease forwards;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-  }
-  @-webkit-keyframes fadeInAnime {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fadeInAnime {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .topArea .topTxt h1 .color-pink {
-    color: #eaa0a0;
   }
   .topArea .topTxt h1::before {
-    content: "";
-    position: absolute;
-    height: 1.6px;
+    height: 1.2px;
     bottom: -15%;
-    left: 0;
-    background-color: #000;
-    -webkit-animation: widthlineAnime 3s linear forwards;
-            animation: widthlineAnime 3s linear forwards;
-    -webkit-animation-delay: 2s;
-            animation-delay: 2s;
-    opacity: 0;
-  }
-  @-webkit-keyframes widthlineAnime {
-    0% {
-      opacity: 0;
-      width: 20%;
-    }
-    100% {
-      opacity: 1;
-      width: 100%;
-    }
-  }
-  @keyframes widthlineAnime {
-    0% {
-      opacity: 0;
-      width: 20%;
-    }
-    100% {
-      opacity: 1;
-      width: 100%;
-    }
   }
   .topArea .topTxt h2 {
-    letter-spacing: 0;
     font-size: 2.5rem;
   }
   .topArea .topTxt h2 .h2-english {
@@ -1476,7 +1386,7 @@ body.appear .wrapper {
     letter-spacing: 0.02rem;
   }
 
-  /* --------------mainArea--------------*/
+  /* ------------------mainArea------------------*/
   .mainArea {
     margin: 133% 5% 15%;
   }
@@ -1504,6 +1414,7 @@ body.appear .wrapper {
     font-size: 1rem;
   }
 
+  /* --------------------skills--------------------*/
   .skills-contents {
     margin: 10% 0;
   }
@@ -1554,9 +1465,6 @@ body.appear .wrapper {
     font-size: 1.6rem;
   }
   .skills-contents .skills-wrap .skills-inner .skills-detail {
-    background-color: #313131;
-    color: #f0e8ec;
-    border-radius: 15px;
     font-size: 1.6rem;
     line-height: 2;
   }
@@ -1565,36 +1473,21 @@ body.appear .wrapper {
     text-align: center;
   }
 
-  /* --------------works--------------*/
-  .works-contents {
-    margin: 15% 0;
-  }
+  /* --------------------works--------------------*/
   .works-contents .works-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 7% 0;
   }
   .works-contents .works-wrap .works-inner {
     width: 90%;
-    margin-bottom: 7%;
+    margin-bottom: 10%;
   }
   .works-contents .works-wrap .works-inner p {
     font-size: 1.5rem;
   }
 
-  /* --------------about--------------*/
-  .about-contents {
-    margin: 10% 0;
-  }
-  .about-contents .about-wrap {
-    margin: 10% 5% 5%;
-  }
+  /* --------------------about--------------------*/
   .about-contents .about-wrap .about-inner {
     position: relative;
   }
@@ -1602,24 +1495,13 @@ body.appear .wrapper {
     position: absolute;
     top: 55px;
     left: -20px;
-    z-index: 10;
-    background-color: rgba(234, 160, 160, 0.6);
     width: 100%;
   }
   .about-contents .about-wrap .about-inner .about-txt p {
     font-size: 1.2rem;
   }
-  .about-contents .about-wrap .about-inner .about-img {
-    position: absolute;
-    top: 13%;
-    right: 5%;
-    width: 45%;
-  }
-  .about-contents .about-wrap .about-inner .about-img img {
-    width: 100%;
-  }
 
-  /* --------------contact--------------*/
+  /* --------------------contact--------------------*/
   .contact-contents {
     margin: 555px 0 10%;
   }
@@ -1639,7 +1521,7 @@ body.appear .wrapper {
     font-size: 1rem;
   }
 
-  /* --------------footer--------------*/
+  /* --------------------footer--------------------*/
   .footer p {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);

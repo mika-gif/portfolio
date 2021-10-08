@@ -1,6 +1,7 @@
 
 
-// ==========タイピング定義========= //
+// ====================タイピング定義====================== //
+
 
 // TextTypingというクラス名がついている子要素（span）を表示から非表示にする定義
 function TextTypingAnime() {
@@ -29,24 +30,24 @@ function TextTypingAnime() {
 
 
 
-// ==========中央から左右ローディング画面処理========= //
+// ========================ローディング画面処理:中央から左右へ動く========================== //
+
 
 $(window).on('load', function () {
   $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
-  //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+  //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
   $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
 
     $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 
   });
-  //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+  //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
 
   //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
   $('.splashbg1').on('animationend', function () {
-    //この中に動かしたいJSを記載
 
-    // ==========タイピング処理========= //
+    // ---------------タイピング処理------------------ //
     var element = $(".TextTyping");
     element.each(function () {
       var text = $(this).html();
@@ -70,54 +71,7 @@ $(window).on('load', function () {
 
 
 
-
-
-
-// ==========上から下ローディング画面処理========= //
-
-// $(window).on('load', function () {
-//   $("#splash-logo").delay(500).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
-
-//   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-//   $("#splash").delay(500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-
-//     $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-
-//   });
-//   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
-
-//   //=====ここから背景が伸びた後に動かしたいJS
-//   $('.splashbg').on('animationend', function () {
-//     //この中に動かしたいJSを記載
-
-//     // ==========タイピング処理========= //
-//     var element = $(".TextTyping");
-//     element.each(function () {
-//       var text = $(this).html();
-//       var textbox = "";
-//       text.split('').forEach(function (t) {
-//         if (t !== " ") {
-//           textbox += '<span>' + t + '</span>';
-//         } else {
-//           textbox += t;
-//         }
-//       });
-//       $(this).html(textbox);
-
-//     });
-//     TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
-
-//   });
-//   //=====ここまで背景が伸びた後に動かしたいJS
-
-// });
-
-
-
-
-
-
-// ここから==========スクロール時、h2文字回転処理========= //
+// =============================スクロール時、h2文字回転処理============================== //
 
 
 // rollAnimeにrollというクラス名を付ける定義
@@ -149,7 +103,7 @@ function RollAnimeControl() {
         $(this).css("transition-delay", "0s");//子要素にcsstransition-delayの秒を0とする
       });
       $(this).removeClass("roll");//rollというアニメーションクラスを除去
-      $(this).removeClass("pink");
+      $(this).removeClass("pink");//pinkというアニメーションクラスを除去
     }
   });
 }
@@ -186,17 +140,16 @@ $(window).on('load', function () {
 });
 
 
-// ここまで==========スクロール時、h2文字回転========= //
 
 
-// ここから==========ふわっと表示する処理========= //
+// =======================スクロール時、ふわっと表示する処理================================ //
 
 // 動きのきっかけとなるアニメーションの名前を定義
 function fadeAnime() {
 
   // ふわっ
   $('.fadeUpTrigger').each(function () { //fadeUpTriggerというクラス名が
-    var elemPos = $(this).offset().top;//要素より、50px上の
+    var elemPos = $(this).offset().top;
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight) {
@@ -209,10 +162,8 @@ function fadeAnime() {
 }
 
 
-
-// 画面をスクロールをしたら動かしたい場合の記述
+// 画面をスクロールをしたら動かす
 $(window).scroll(function () {
   fadeAnime();/* アニメーション用の関数を呼ぶ*/
 });
 
-// ここまで==========ふわっと表示する処理========= //

@@ -11,32 +11,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Stalemate&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Italianno&display=swap" rel="stylesheet">
-  <!-- chromeバグ対応 -->
+  <!-- chrome transitionバグ対応 -->
   <script>console.log("")</script>
 </head>
 
 <body id="indexPage">
 
-  <!---上から下画面遷移用-->
-  <!-- <div id="splash">
-    <div id="splash-logo">Thank you for watching !</div>
-  </div>
-  <div class="splashbg"></div> -->
-  <!--中央から左右画面遷移用-->
+  <!--ロード画面中央から左右画面遷移-->
   <div id="splash">
     <div id="splash-logo" class="splash-font"><span class="color-pink">T</span>hank you <br class="br-sp">for<br
         class="br-sp"> visiting<span class="color-pink">! !</span></div>
-    <!--/splash-->
   </div>
   <div class="splashbg1"></div>
   <div class="splashbg2"></div>
 
+  <!-- wrapper -->
   <div class="wrapper">
     <!-- header -->
     <header class="header">
       <div class="h1-wrap">
         <h1><a href="index.html"> MIKA's PORTFORIO</a></h1>
       </div>
+      <!-- nav -->
       <nav class="nav">
         <ul>
           <li><a href="index.html#works">works</a></li>
@@ -46,9 +42,11 @@
       </nav>
     </header>
 
+    <!-- container -->
     <div class="container">
       <main>
         <article>
+
           <!-- topArea -->
           <div class="topArea">
             <div class="topImg">
@@ -67,11 +65,11 @@
                 そんなデザインを共に創りたい人です。</p>
             </div>
           </div>
+
           <!-- mainArea -->
           <div class="mainArea">
             <!-- skill -->
             <section id="skills" class="skills-contents">
-
               <h2 class="rollAnime">Skills..</h2>
               <p>できること</p>
 
@@ -234,9 +232,9 @@
             <section id="contact" class="contact-contents">
               <h2 class="rollAnime">Contact..</h2>
               <p>お問い合わせ</p>
+
               <div class="contact-wrap fadeUpTrigger">
                 <p>ご連絡は下記お問い合わせフォームより<br class="br-sp">お願い致します。</p>
-                <!-- <p>CONTACT ME</p> -->
                 <div class="button type3">
                   CONTACT ME
                 </div>
@@ -247,7 +245,7 @@
         </article>
       </main>
     </div>
-
+    <!-- footer -->
     <footer id="footer" class="footer">
       <p>©Mika Hase</p>
       <div class="footer-img">
