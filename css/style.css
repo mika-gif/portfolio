@@ -550,8 +550,8 @@ body.appear .wrapper {
   opacity: 0;
   -webkit-animation: heightlineAnime 3s infinite ease-in-out forwards;
           animation: heightlineAnime 3s infinite ease-in-out forwards;
-  -webkit-animation-delay: 8s;
-          animation-delay: 8s;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
 }
 @-webkit-keyframes heightlineAnime {
   0% {
