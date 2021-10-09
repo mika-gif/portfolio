@@ -2,9 +2,9 @@
 @use "reset";
 
 
-/* -------------------------------------------------
+/* --------------------------------------------------------
 共通レイアウト
-----------------------------------------------------*/
+-----------------------------------------------------------*/
 
 /* ---変数定義---*/
 $silverPink-color: #f0e8ec;
@@ -66,11 +66,11 @@ html {
 
 /*========= ロード画面中央から左右画面遷移 ===============*/
 
-body{
+body#indexPage{
     background:#333;/*遷移アニメーションと同じ色を指定*/
 }
 
-body.appear{
+body#indexPage.appear{
     background:#fff;/*画面を開いた後の背景色を指定*/
 }
 
@@ -81,13 +81,13 @@ body.appear{
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg1,
-body.appear .splashbg2{
+body#indexPage.appear .splashbg1,
+body#indexPage.appear .splashbg2{
 	display:block;
 }
 
 /*右に消えるエリア*/
-body.appear .splashbg1{
+body#indexPage.appear .splashbg1{
 	animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;
@@ -118,7 +118,7 @@ body.appear .splashbg1{
 }
 
 /*左に消えるエリア*/
-body.appear .splashbg2{
+body#indexPage.appear .splashbg2{
 	animation-name:PageAnime2;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;
@@ -150,12 +150,12 @@ body.appear .splashbg2{
 }
 
 /*画面遷移の後現れるコンテンツ設定*/
-.wrapper{
+body#indexPage .wrapper{
 	opacity: 0;/*はじめは透過0に*/
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .wrapper{
+body#indexPage.appear .wrapper{
 	animation-name:PageAnimeAppear;
 	animation-duration:1s;
 	// animation-delay:0.2s;
@@ -1222,3 +1222,5 @@ body.appear .wrapper{
   }
 
 }
+
+@import "works01";

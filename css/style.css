@@ -101,9 +101,9 @@ input, select {
   vertical-align: middle;
 }
 
-/* -------------------------------------------------
+/* --------------------------------------------------------
 共通レイアウト
-----------------------------------------------------*/
+-----------------------------------------------------------*/
 /* ---変数定義---*/
 /* ------------*/
 html {
@@ -157,12 +157,12 @@ html body .wrapper {
 }
 
 /*========= ロード画面中央から左右画面遷移 ===============*/
-body {
+body#indexPage {
   background: #333;
   /*遷移アニメーションと同じ色を指定*/
 }
 
-body.appear {
+body#indexPage.appear {
   background: #fff;
   /*画面を開いた後の背景色を指定*/
 }
@@ -174,13 +174,13 @@ body.appear {
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .splashbg1,
-body.appear .splashbg2 {
+body#indexPage.appear .splashbg1,
+body#indexPage.appear .splashbg2 {
   display: block;
 }
 
 /*右に消えるエリア*/
-body.appear .splashbg1 {
+body#indexPage.appear .splashbg1 {
   -webkit-animation-name: PageAnime;
           animation-name: PageAnime;
   -webkit-animation-duration: 1.2s;
@@ -239,7 +239,7 @@ body.appear .splashbg1 {
   }
 }
 /*左に消えるエリア*/
-body.appear .splashbg2 {
+body#indexPage.appear .splashbg2 {
   -webkit-animation-name: PageAnime2;
           animation-name: PageAnime2;
   -webkit-animation-duration: 1.2s;
@@ -298,13 +298,13 @@ body.appear .splashbg2 {
   }
 }
 /*画面遷移の後現れるコンテンツ設定*/
-.wrapper {
+body#indexPage .wrapper {
   opacity: 0;
   /*はじめは透過0に*/
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .wrapper {
+body#indexPage.appear .wrapper {
   -webkit-animation-name: PageAnimeAppear;
           animation-name: PageAnimeAppear;
   -webkit-animation-duration: 1s;
@@ -1527,5 +1527,17 @@ body.appear .wrapper {
             transform: scale(0.6);
     right: 1%;
   }
+}
+/* -------------------------------------------------------------------
+works01Page - ON/OFCafe詳細ページ
+----------------------------------------------------------------------*/
+#works01Page .works {
+  margin: 0 auto;
+}
+#works01Page .works h1 {
+  color: lightcoral;
+}
+#works01Page .works img {
+  max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
