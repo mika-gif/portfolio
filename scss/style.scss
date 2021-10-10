@@ -1,5 +1,27 @@
+ /* --------------------------------------------------------
+リセットcss
+-----------------------------------------------------------*/
 
 @use "reset";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
+}
 
 
 /* --------------------------------------------------------
@@ -19,7 +41,8 @@ html {
   font-size: 62.5%; //10px
   body {
     font-size: 1.6em; //16px
-    font-family: 'Shippori Mincho', serif;
+    // font-family: 'Shippori Mincho', serif;
+    font-family: "Noto Serif JP", serif;
     color: $gray-color;
     .wrapper{
       width: 90%;
@@ -237,6 +260,7 @@ body#indexPage.appear .wrapper{
   width: 86.7%;
   margin: 1% auto;
   padding: 1.5% 0;
+  font-family: 'Shippori Mincho', serif;
   font-size: 2rem;
   .h1-wrap{
     width: 50%;
@@ -411,11 +435,12 @@ body#indexPage.appear .wrapper{
     letter-spacing: 0.09em;
     h1{
       position: relative;
+      font-family: 'Shippori Mincho', serif;
       font-size: 4.5rem;
       white-space: nowrap;
       text-shadow: -4px 0px 1px azure;
       margin: 12% 0 0;
-      border-bottom: 2px solid #000;
+      border-bottom: 3px solid #000;
       padding: 0 0 3% 0;
       opacity: 0;
       animation: fadeInAnime 3s ease forwards;
@@ -434,8 +459,8 @@ body#indexPage.appear .wrapper{
       &::before{
         content: '';
         position: absolute;
-        height: 1.6px;
-        bottom: -8%;
+        height: 2%;
+        bottom: -18%;
         left: 0;
         background-color: #000;
         animation: widthlineAnime 3s linear forwards;
@@ -518,7 +543,7 @@ body#indexPage.appear .wrapper{
         content: '';
         position: absolute;
         width: 38%;
-        height: 3%;
+        height: 8%;
         bottom: 50%;
         border-top: solid 1px #000;
         border-bottom: solid 2px #000;
