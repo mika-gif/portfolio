@@ -29,28 +29,34 @@ function TextTypingAnime() {
 }
 
 
+// ========================ローディング画面処理:中央から左右へ動く========================== //
+// ========================ローディング画面は、セッション間に一度のみ表示されるよう対応======== //
+
+
 const keyName = 'visited';
 const keyValue = true;
 
+//初回アクセス時は、ローディングを表示
 if (!sessionStorage.getItem(keyName)) {
-  //sessionStorageにキーと値を追加
-  sessionStorage.setItem(keyName, keyValue);
 
-  //ここに初回アクセス時の処理
-  // console.log("初めての訪問です");
-  $("#splash").css("display", "block");//１回目はローディングを表示
+  sessionStorage.setItem(keyName, keyValue); //sessionStorageにキーと値を追加
+
+  //初回アクセス時の処理
+
   $(window).on('load', function () {
-    $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+
+    $("#splash").css("display", "block");//ロゴを表示
+    $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウト
 
     //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
-    $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+    $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリアを1.5秒でフェードアウト
 
       $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 
     });
     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
 
-    //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+    //=====ここから背景が伸びた後に動かしたいJSをまとめる
     $('.splashbg1').on('animationend', function () {
 
       // ---------------タイピング処理------------------ //
@@ -75,54 +81,14 @@ if (!sessionStorage.getItem(keyName)) {
 
   });
 
+  //2回目以降アクセス時の処理
 } else {
-  //ここに通常アクセス時の処理
-  // console.log("訪問済みです");
-  $("#splash").css("display", "none");//同日2回目のアクセスでローディング画面非表示
-  $('body').css("background", "#ffffff");
-  $('.wrapper').css("opacity", "1");
+  // ローディング画面を非表示にする
+  $("#splash").css("display", "none"); //ローディング画面非表示
+  $('body').css("background", "#ffffff"); //body背景色グレー→白
+  $('.wrapper').css("opacity", "1"); //コンテンツを表示する
 }
 
-
-
-// ========================ローディング画面処理:中央から左右へ動く========================== //
-
-
-// $(window).on('load', function () {
-//   $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
-
-//   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
-//   $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-
-//     $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-
-//   });
-//   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
-
-//   //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
-//   $('.splashbg1').on('animationend', function () {
-
-//     // ---------------タイピング処理------------------ //
-//     var element = $(".TextTyping");
-//     element.each(function () {
-//       var text = $(this).html();
-//       var textbox = "";
-//       text.split('').forEach(function (t) {
-//         if (t !== " ") {
-//           textbox += '<span>' + t + '</span>';
-//         } else {
-//           textbox += t;
-//         }
-//       });
-//       $(this).html(textbox);
-
-//     });
-//     TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
-
-//   });
-//   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
-
-// });
 
 
 
