@@ -79,6 +79,8 @@ if (!sessionStorage.getItem(keyName)) {
   //ここに通常アクセス時の処理
   // console.log("訪問済みです");
   $("#splash").css("display", "none");//同日2回目のアクセスでローディング画面非表示
+  $('body').css("background", "#ffffff");
+  $('.wrapper').css("opacity", "1");
 }
 
 
