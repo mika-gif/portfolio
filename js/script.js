@@ -28,36 +28,17 @@ function TextTypingAnime() {
   });
 }
 
-//同じ日付で2回目以降ならローディング画面非表示の設定
 
-var splash_text = $.cookie('accessdate'); //キーが入っていれば年月日を取得
-var myD = new Date();//日付データを取得
-var myYear = String(myD.getFullYear());//年
-var myMonth = String(myD.getMonth() + 1);//月
-var myDate = String(myD.getDate());//日
+const keyName = 'visited';
+const keyValue = true;
 
-if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセスした日付を比較↓
+if (!sessionStorage.getItem(keyName)) {
+  //sessionStorageにキーと値を追加
+  sessionStorage.setItem(keyName, keyValue);
+
+  //ここに初回アクセス時の処理
+  // console.log("初めての訪問です");
   $("#splash").css("display", "block");//１回目はローディングを表示
-  //         setTimeout(function () {
-
-  //             $("#splash_logo").fadeIn(1000, function () {//1000ミリ秒（1秒）かけてロゴがフェードイン
-  //                 setTimeout(function () {
-  //             $("#splash_logo").fadeOut(1000);//1000ミリ秒（1秒）かけてロゴがフェードアウト
-  //                 }, 1000);//1000ミリ秒（1秒）後に処理を実行
-
-  //         setTimeout(function () {
-  //             $("#splash").fadeOut(1000, function () {//1000ミリ秒（1秒）かけて画面がフェードアウト
-  //             var myD = new Date();
-  //             var myYear = String(myD.getFullYear());
-  //             var myMonth = String(myD.getMonth() + 1);
-  //             var myDate = String(myD.getDate());
-  //             $.cookie('accessdate', myYear + myMonth + myDate); //accessdateキーで年月日を記録
-  //         });
-  //         }, 1700);//1700ミリ秒（1.7秒）後に処理を実行
-  //     });
-  // }, 1000);//1000ミリ秒（1秒）後に処理を実行
-
-
   $(window).on('load', function () {
     $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
@@ -94,10 +75,11 @@ if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセス�
 
   });
 
-
-
 } else {
+  //ここに通常アクセス時の処理
+  // console.log("訪問済みです");
   $("#splash").css("display", "none");//同日2回目のアクセスでローディング画面非表示
+  $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 }
 
 
@@ -105,41 +87,41 @@ if (splash_text != myYear + myMonth + myDate) {//cookieデータとアクセス�
 // ========================ローディング画面処理:中央から左右へ動く========================== //
 
 
-// $(window).on('load', function () {
-//   $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+$(window).on('load', function () {
+  $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
-//   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
-//   $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+  //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
+  $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
 
-//     $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 
-//   });
-//   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
+  });
+  //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
 
-//   //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
-//   $('.splashbg1').on('animationend', function () {
+  //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+  $('.splashbg1').on('animationend', function () {
 
-//     // ---------------タイピング処理------------------ //
-//     var element = $(".TextTyping");
-//     element.each(function () {
-//       var text = $(this).html();
-//       var textbox = "";
-//       text.split('').forEach(function (t) {
-//         if (t !== " ") {
-//           textbox += '<span>' + t + '</span>';
-//         } else {
-//           textbox += t;
-//         }
-//       });
-//       $(this).html(textbox);
+    // ---------------タイピング処理------------------ //
+    var element = $(".TextTyping");
+    element.each(function () {
+      var text = $(this).html();
+      var textbox = "";
+      text.split('').forEach(function (t) {
+        if (t !== " ") {
+          textbox += '<span>' + t + '</span>';
+        } else {
+          textbox += t;
+        }
+      });
+      $(this).html(textbox);
 
-//     });
-//     TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
+    });
+    TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 
-//   });
-//   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
+  });
+  //=====ここまで背景が伸びた後に動かしたいJSをまとめる
 
-// });
+});
 
 
 

@@ -156,6 +156,7 @@ html body .wrapper {
   background: #333;
   z-index: 9999999;
   text-align: center;
+  display: none;
 }
 #splash #splash-logo {
   position: absolute;
