@@ -87,41 +87,41 @@ if (!sessionStorage.getItem(keyName)) {
 // ========================ローディング画面処理:中央から左右へ動く========================== //
 
 
-$(window).on('load', function () {
-  $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
+// $(window).on('load', function () {
+//   $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
 
-  //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
-  $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+//   //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
+//   $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
 
-    $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+//     $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
 
-  });
-  //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
+//   });
+//   //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
 
-  //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
-  $('.splashbg1').on('animationend', function () {
+//   //=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+//   $('.splashbg1').on('animationend', function () {
 
-    // ---------------タイピング処理------------------ //
-    var element = $(".TextTyping");
-    element.each(function () {
-      var text = $(this).html();
-      var textbox = "";
-      text.split('').forEach(function (t) {
-        if (t !== " ") {
-          textbox += '<span>' + t + '</span>';
-        } else {
-          textbox += t;
-        }
-      });
-      $(this).html(textbox);
+//     // ---------------タイピング処理------------------ //
+//     var element = $(".TextTyping");
+//     element.each(function () {
+//       var text = $(this).html();
+//       var textbox = "";
+//       text.split('').forEach(function (t) {
+//         if (t !== " ") {
+//           textbox += '<span>' + t + '</span>';
+//         } else {
+//           textbox += t;
+//         }
+//       });
+//       $(this).html(textbox);
 
-    });
-    TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
+//     });
+//     TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 
-  });
-  //=====ここまで背景が伸びた後に動かしたいJSをまとめる
+//   });
+//   //=====ここまで背景が伸びた後に動かしたいJSをまとめる
 
-});
+// });
 
 
 
