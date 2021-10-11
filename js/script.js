@@ -85,8 +85,10 @@ if (!sessionStorage.getItem(keyName)) {
 } else {
   // ローディング画面を非表示にする
   $("#splash").css("display", "none"); //ローディング画面非表示
-  $('body').css("background", "#ffffff"); //body背景色グレー→白
+  $('body').css("background", "#ffffff"); //body背景色グレーから白に
   $('.wrapper').css("opacity", "1"); //コンテンツを表示する
+  $('.topImg').removeClass(".shadowBox");
+  $('.topImg').css(".shadowBox02");
 }
 
 

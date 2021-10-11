@@ -408,7 +408,7 @@ body#indexPage.appear .wrapper{
     .shadowBox{
      position: absolute;
      top: 9%;
-     left: 6%;
+     left: 7%;
      width: 90%;
      height: 95%;
      opacity: 0.3;
@@ -426,8 +426,30 @@ body#indexPage.appear .wrapper{
       100% {
       transform: translateX(10%);
       }
-    }   
-   }
+    }
+    .shadowBox02{
+      position: absolute;
+      top: 9%;
+      left: 17%;
+      width: 90%;
+      height: 95%;
+      opacity: 0.3;
+      background-color: $gray-color;
+      border-radius: 2% 2% 68% 2%;
+      z-index: -1;
+      // animation: shadowAnime 3s forwards;
+      // animation-delay: 1s;
+     } 
+    //  @keyframes shadowAnime {
+    //    0% {
+    //    transform: translateX(0px);
+    //    }
+     
+    //    100% {
+    //    transform: translateX(10%);
+    //    }
+    //  }      
+  }
   .topTxt{
     width: 55%;
     padding: 5%;

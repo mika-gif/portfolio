@@ -625,7 +625,7 @@ body#indexPage.appear .wrapper {
 .topArea .topImg .shadowBox {
   position: absolute;
   top: 9%;
-  left: 6%;
+  left: 7%;
   width: 90%;
   height: 95%;
   opacity: 0.3;
@@ -656,6 +656,17 @@ body#indexPage.appear .wrapper {
     -webkit-transform: translateX(10%);
             transform: translateX(10%);
   }
+}
+.topArea .topImg .shadowBox02 {
+  position: absolute;
+  top: 9%;
+  left: 17%;
+  width: 90%;
+  height: 95%;
+  opacity: 0.3;
+  background-color: #313131;
+  border-radius: 2% 2% 68% 2%;
+  z-index: -1;
 }
 .topArea .topTxt {
   width: 55%;
