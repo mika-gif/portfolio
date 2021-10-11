@@ -45,19 +45,29 @@ if (!sessionStorage.getItem(keyName)) {
 
   $(window).on('load', function () {
 
+
+
     $("#splash").css("display", "block");//ロゴを表示
     $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウト
+
+    $('.shadowBox').addClass("shadowBox-anime");//初回のみ画像背景の影を動かす
+    $('.shadowBox').removeClass("shadowBox");
+
+    $('.topTxt>h1').css("animation-delay", "2s");
+    $('.topTxt>h2').css("animation-delay", "3s");
+    $('.topTxt>p').css("animation-delay", "4s");
 
     //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
     $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリアを1.5秒でフェードアウト
 
       $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-
+      // $("#indexPage").css("background", "#333");
     });
     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
 
     //=====ここから背景が伸びた後に動かしたいJSをまとめる
     $('.splashbg1').on('animationend', function () {
+
 
       // ---------------タイピング処理------------------ //
       var element = $(".TextTyping");
@@ -83,12 +93,27 @@ if (!sessionStorage.getItem(keyName)) {
 
   //2回目以降アクセス時の処理
 } else {
+
   // ローディング画面を非表示にする
   $("#splash").css("display", "none"); //ローディング画面非表示
-  $('body').css("background", "#ffffff"); //body背景色グレーから白に
   $('.wrapper').css("opacity", "1"); //コンテンツを表示する
-  $('.topImg').removeClass(".shadowBox");
-  $('.topImg').css(".shadowBox02");
+
+  // ---------------タイピング処理------------------ //
+  var element = $(".TextTyping");
+  element.each(function () {
+    var text = $(this).html();
+    var textbox = "";
+    text.split('').forEach(function (t) {
+      if (t !== " ") {
+        textbox += '<span>' + t + '</span>';
+      } else {
+        textbox += t;
+      }
+    });
+    $(this).html(textbox);
+
+  });
+  TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 }
 
 
