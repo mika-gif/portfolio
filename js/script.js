@@ -45,15 +45,12 @@ if (!sessionStorage.getItem(keyName)) {
 
   $(window).on('load', function () {
 
-
+    $("#indexPage").addClass("loading-bkgcolor"); //ロード画面の背景色を灰色に
 
     $("#splash").css("display", "block");//ロゴを表示
     $("#splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウト
 
-    $('.shadowBox').addClass("shadowBox-anime");//初回のみ画像背景の影を動かす
-    $('.shadowBox').removeClass("shadowBox");
-
-    $('.topTxt>h1').css("animation-delay", "2s");
+    $('.topTxt>h1').css("animation-delay", "2s");//遅延時間変更
     $('.topTxt>h2').css("animation-delay", "3s");
     $('.topTxt>p').css("animation-delay", "4s");
 
@@ -97,6 +94,7 @@ if (!sessionStorage.getItem(keyName)) {
   // ローディング画面を非表示にする
   $("#splash").css("display", "none"); //ローディング画面非表示
   $('.wrapper').css("opacity", "1"); //コンテンツを表示する
+  $('.shadowBox').css("animation-delay", "0s");//遅延時間変更
 
   // ---------------タイピング処理------------------ //
   var element = $(".TextTyping");

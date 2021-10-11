@@ -115,6 +115,7 @@ input, select {
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
+  color: #313131;
 }
 
 img {
@@ -180,6 +181,10 @@ html body .wrapper {
 }
 
 /*========= ロード画面中央から左右画面遷移 ===============*/
+.loading-bkgcolor {
+  background: #333;
+}
+
 body#indexPage.appear {
   background: #fff;
   /*画面を開いた後の背景色を指定*/
@@ -634,14 +639,14 @@ body#indexPage.appear .wrapper {
           box-sizing: border-box;
   position: relative;
   z-index: 1;
-  /*---初回アクセス時のみ影動かす---*/
-  /*---2回目以降のアクセス時は影停止---*/
+  /*---初回アクセス時の影---*/
+  /*---2回目アクセス以降の影---*/
 }
 .topArea .topImg img {
   width: 100%;
   z-index: 1;
 }
-.topArea .topImg .shadowBox-anime {
+.topArea .topImg .shadowBox {
   position: absolute;
   top: 9%;
   left: 7%;
@@ -667,31 +672,6 @@ body#indexPage.appear .wrapper {
     -webkit-transform: translateX(10%);
             transform: translateX(10%);
   }
-}
-@keyframes shadowAnime {
-  0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  100% {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%);
-  }
-}
-.topArea .topImg .shadowBox {
-  position: absolute;
-  top: 9%;
-  left: 7%;
-  width: 90%;
-  height: 95%;
-  opacity: 0.3;
-  background-color: #313131;
-  border-radius: 2% 2% 68% 2%;
-  z-index: -1;
-  -webkit-animation: shadowAnime 3s forwards;
-          animation: shadowAnime 3s forwards;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
 }
 @keyframes shadowAnime {
   0% {

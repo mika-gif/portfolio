@@ -14,6 +14,7 @@
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
+  color: #313131;
 }
 
 img {
@@ -88,8 +89,8 @@ html {
 
 /*========= ロード画面中央から左右画面遷移 ===============*/
 
-body#indexPage{
-    // background:#333;/*遷移アニメーションと同じ色を指定*/
+.loading-bkgcolor{
+  background: #333; //jsで付与
 }
 
 body#indexPage.appear{
@@ -419,8 +420,8 @@ body#indexPage.appear .wrapper{
       width: 100%;
       z-index: 1;
     }
-    /*---初回アクセス時のみ影動かす---*/
-    .shadowBox-anime{
+    /*---初回アクセス時の影---*/
+    .shadowBox{
      position: absolute;
      top: 9%;
      left: 7%;
@@ -443,29 +444,29 @@ body#indexPage.appear .wrapper{
       transform: translateX(10%);
       }
     }
-    /*---2回目以降のアクセス時は影停止---*/
-    .shadowBox{
-      position: absolute;
-      top: 9%;
-      left: 7%;
-      width: 90%;
-      height: 95%;
-      opacity: 0.3;
-      background-color: $gray-color;
-      border-radius: 2% 2% 68% 2%;
-      z-index: -1;
-      animation: shadowAnime 3s forwards;
-      backface-visibility:hidden;
-      @keyframes shadowAnime {
-        0% {
-        transform: translateX(0px);
-        }
+    /*---2回目アクセス以降の影---*/
+    // .shadowBox{
+    //   position: absolute;
+    //   top: 9%;
+    //   left: 7%;
+    //   width: 90%;
+    //   height: 95%;
+    //   opacity: 0.3;
+    //   background-color: $gray-color;
+    //   border-radius: 2% 2% 68% 2%;
+    //   z-index: -1;
+    //   animation: shadowAnime 3s forwards;
+    //   backface-visibility:hidden;
+    //   @keyframes shadowAnime {
+    //     0% {
+    //     transform: translateX(0px);
+    //     }
       
-        100% {
-        transform: translateX(10%);
-        }
-      } 
-     }       
+    //     100% {
+    //     transform: translateX(10%);
+    //     }
+    //   } 
+    //  }       
   }
   .topTxt{
     width: 55%;
