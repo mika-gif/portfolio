@@ -228,16 +228,19 @@ body#indexPage.appear .wrapper{
   animation-duration: 1.3s;
   animation-timing-function: ease;
   opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes fadeUpAnime {
   from {
     opacity: 0;
+    visibility: hidden;
     transform: translateY(100px);
   }
 
   to {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
   }
 }
@@ -443,30 +446,7 @@ body#indexPage.appear .wrapper{
       100% {
       transform: translateX(10%);
       }
-    }
-    /*---2回目アクセス以降の影---*/
-    // .shadowBox{
-    //   position: absolute;
-    //   top: 9%;
-    //   left: 7%;
-    //   width: 90%;
-    //   height: 95%;
-    //   opacity: 0.3;
-    //   background-color: $gray-color;
-    //   border-radius: 2% 2% 68% 2%;
-    //   z-index: -1;
-    //   animation: shadowAnime 3s forwards;
-    //   backface-visibility:hidden;
-    //   @keyframes shadowAnime {
-    //     0% {
-    //     transform: translateX(0px);
-    //     }
-      
-    //     100% {
-    //     transform: translateX(10%);
-    //     }
-    //   } 
-    //  }       
+    }     
   }
   .topTxt{
     width: 55%;
@@ -1166,7 +1146,7 @@ body#indexPage.appear .wrapper{
         content: '';
         position: absolute;
         width: 28%;
-        height: 4%;
+        height: 8%;
         bottom: 50%;
         border-top: solid 1.2px #000;
         border-bottom: solid 1.8px #000;
