@@ -1666,9 +1666,14 @@ works01Page - ON/OFCafe詳細ページ
   font-size: 1.8rem;
 }
 #works01Page .worksPage .url a::after {
-  content: url("../images/icon_link.png");
-  width: 1.8rem;
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
   margin: 0 1%;
+  background-image: url(../images/icon_link.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #works01Page .worksPage .url a:hover {
   color: rosybrown;
@@ -1803,7 +1808,7 @@ works01Page - ON/OFCafe詳細ページ
     bottom: -14%;
   }
   #works01Page .worksPage p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 19% 0 4% 0;
   }
   #works01Page .worksPage .url {
@@ -1811,6 +1816,10 @@ works01Page - ON/OFCafe詳細ページ
   }
   #works01Page .worksPage .url a {
     font-size: 1.3rem;
+  }
+  #works01Page .worksPage .url a::after {
+    width: 1.2rem;
+    height: 1.2rem;
   }
   #works01Page .worksPage .worksPage-inner dl {
     font-size: 1.3rem;

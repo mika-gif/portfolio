@@ -59,10 +59,17 @@ works01Page - ON/OFCafe詳細ページ
       a{
         font-size: 1.8rem;
         &::after{
-          content: url('../images/icon_link.png');
-          width: 1.8rem;
+          content: '';
+          display: inline-block;
+          width: 1.6rem;
+          height: 1.6rem;
           margin: 0 1%;
+          background-image: url(../images/icon_link.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+
         }
+
         &:hover{
           color: rosybrown;
           font-weight: bold;
@@ -167,6 +174,7 @@ works01Page - ON/OFCafe詳細ページ
 /*================== タブレット対応 ========================*/
 
 @media screen and (max-width:1024px){
+  
   #works01Page{
     .worksPage{
       padding: 0 5%;
@@ -191,8 +199,6 @@ works01Page - ON/OFCafe詳細ページ
     }
   }
   
-
-
 }
 
 /*======================= スマホ対応 ===========================*/
@@ -212,13 +218,17 @@ works01Page - ON/OFCafe詳細ページ
         }
       }
       p{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         margin: 19% 0 4% 0;
       }
       .url{
         margin: 6% 0 20%;
         a{
           font-size: 1.3rem;
+          &::after{
+            width: 1.2rem;
+            height: 1.2rem;
+          }
         }
       }
       .worksPage-inner{
