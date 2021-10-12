@@ -823,6 +823,72 @@ body#indexPage.appear .wrapper{
   }
 }
 
+/*========= ページトップ ===============*/
+/*リンクの形状*/
+#footer{
+  #page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background: $gray-color;
+    border-radius: 5px;
+    border: 1px solid $silverPink-color;
+    width: 60px;
+    height: 60px;
+    color: $silverPink-color;
+    text-align: center;
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
+  }
+
+  #page-top a:hover{
+    opacity: 0.5;
+  }
+
+  /*リンクを右下に固定*/
+  #page-top {
+    position: fixed;
+    right: 87px;
+    z-index: 2;
+      /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  /*上に上がる動き*/
+
+  #page-top.UpMove{
+    animation: UpAnime 0.5s forwards;
+  }
+  @keyframes UpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+  /*下に下がる動き*/
+
+  #page-top.DownMove{
+    animation: DownAnime 0.5s forwards;
+  }
+  @keyframes DownAnime{
+    from {
+      opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  }
+}
+
 
 
 /* -------------------------------------------------------------------
@@ -1274,6 +1340,23 @@ body#indexPage.appear .wrapper{
       right: 1%;
     }
   }
+
+/* ----ページトップ----*/
+  /*リンクの形状*/
+  #footer{
+    #page-top a{
+      width: 55px;
+      height: 55px;
+      transform: scale(0.6);//chrome対応 fontsize:6px 
+    }
+    /*リンクを右下に固定*/
+    #page-top {
+      right: 22px;
+    }
+}
+
+
+
 
 }
 

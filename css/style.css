@@ -1125,6 +1125,104 @@ body#indexPage.appear .wrapper {
   font-style: italic;
 }
 
+/*========= ページトップ ===============*/
+/*リンクの形状*/
+#footer {
+  /*リンクを右下に固定*/
+  /*上に上がる動き*/
+  /*下に下がる動き*/
+}
+#footer #page-top a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #313131;
+  border-radius: 5px;
+  border: 1px solid #f0e8ec;
+  width: 60px;
+  height: 60px;
+  color: #f0e8ec;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.6rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#footer #page-top a:hover {
+  opacity: 0.5;
+}
+#footer #page-top {
+  position: fixed;
+  right: 87px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+#footer #page-top.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+#footer #page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
 /* -------------------------------------------------------------------
 レスポンシブ対応
 ----------------------------------------------------------------------*/
@@ -1590,6 +1688,21 @@ body#indexPage.appear .wrapper {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
     right: 1%;
+  }
+
+  /* ----ページトップ----*/
+  /*リンクの形状*/
+  #footer {
+    /*リンクを右下に固定*/
+  }
+  #footer #page-top a {
+    width: 55px;
+    height: 55px;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  #footer #page-top {
+    right: 22px;
   }
 }
 /* -------------------------------------------------------------------
