@@ -1787,13 +1787,17 @@ works01Page - ON/OFCafe詳細ページ
 /*======================= スマホ対応 ===========================*/
 @media screen and (max-width: 599px) {
   #works01Page .worksPage h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   #works01Page .worksPage h1::first-letter {
-    font-size: 6.5rem;
+    font-size: 5.5rem;
+  }
+  #works01Page .worksPage h1::before {
+    bottom: -14%;
   }
   #works01Page .worksPage p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin: 12% 0 4% 0;
   }
   #works01Page .worksPage .url {
     margin: 6% 0 9%;
@@ -1804,14 +1808,14 @@ works01Page - ON/OFCafe詳細ページ
   #works01Page .worksPage .worksPage-inner dl {
     font-size: 1.3;
   }
-  #works01Page .worksPage .comp-wrapper p {
-    font-size: 1.6rem;
+  #works01Page .worksPage .worksPage-inner .comp-wrapper p {
+    font-size: 1.3rem;
   }
-  #works01Page .worksPage .comp-wrapper p::before {
+  #works01Page .worksPage .worksPage-inner .comp-wrapper p::before {
     width: 22%;
     height: 8%;
   }
-  #works01Page .worksPage .comp-wrapper p::after {
+  #works01Page .worksPage .worksPage-inner .comp-wrapper p::after {
     width: 22%;
     height: 8%;
   }
