@@ -31,11 +31,12 @@ works01Page - ON/OFCafe詳細ページ
       padding: 0 0 1% 2%;
       font-size: 2.5rem;
       font-family: 'Shippori Mincho', serif;
+      text-shadow: -5px -2px 1px azure;
       border-bottom: 3px solid;
       position: relative;
       &::first-letter{
-        font-size: 7.0rem;
-        color: #996c33;
+        font-size: 7.5rem;
+        color: #eaa0a0;
       }
       &::before{
         content: '';
@@ -72,6 +73,35 @@ works01Page - ON/OFCafe詳細ページ
       margin: 0 auto;
       max-width: 640px;
     .worksPage-mocupImg{
+      position: relative;
+      padding: 4%;
+      &::after,
+      &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        border: 2px solid;
+        transition: all 0.6s ease;
+        border-radius: 2px;
+      }
+      &::after{
+        bottom: 0;
+        right: 0;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: $gray-color;
+        border-right-color: $gray-color;
+      }
+      &::before{
+        top: 0;
+        left: 0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: $gray-color;
+        border-left-color: $gray-color;
+      }
       img{
         max-width: 100%;
       }
@@ -130,3 +160,74 @@ works01Page - ON/OFCafe詳細ページ
   }
 }
 
+/* -------------------------------------------------------------------
+レスポンシブ対応
+----------------------------------------------------------------------*/
+
+/*================== タブレット対応 ========================*/
+
+@media screen and (max-width:1024px){
+  #works01Page{
+    .worksPage{
+      padding: 0 5%;
+      h1{
+        margin: 3% 0% 6%;
+      }
+      .worksPage-inner{
+        dl{
+          display: block;
+          dt{
+            width: 100%;
+            .br-sp{
+              display: none;
+            }
+          }
+          dd{
+            width: 100%;
+            padding-top: 10%;
+          }
+        }
+      }
+    }
+  }
+  
+
+
+}
+
+/*======================= スマホ対応 ===========================*/
+ 
+@media screen and (max-width:599px){
+
+  #works01Page{
+    .worksPage{
+      // padding: 0 5%;
+      h1{
+        // margin: 3% 0% 6%;
+        font-size: 2.0rem;
+      }
+      p{
+        font-size: 1.8rem;
+      }
+      .url{
+        margin: 6% 0 9%;
+        a{
+          font-size: 1.6rem;
+        }
+      }
+      .worksPage-inner{
+        dl{
+          // display: block;
+          dt{
+            // width: 100%;
+          }
+          dd{
+            // width: 100%;
+            // padding-top: 10%;
+          }
+        }
+      }
+    }
+  }
+
+}
