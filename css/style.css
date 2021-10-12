@@ -1632,7 +1632,7 @@ works01Page - ON/OFCafe詳細ページ
   }
 }
 #works01Page .worksPage h1 {
-  margin: 3% 5% 6%;
+  margin: 3% 5% 8%;
   padding: 0 0 1% 2%;
   font-size: 2.5rem;
   font-family: "Shippori Mincho", serif;
@@ -1656,11 +1656,10 @@ works01Page - ON/OFCafe詳細ページ
 #works01Page .worksPage p {
   text-align: center;
   font-size: 2rem;
-  margin: 0 0 4% 0;
 }
 #works01Page .worksPage .url {
   text-align: center;
-  margin: 2% 0 5%;
+  margin: 5% 0 7%;
 }
 #works01Page .worksPage .url a {
   font-size: 1.8rem;
