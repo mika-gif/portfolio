@@ -202,9 +202,10 @@ works01Page - ON/OFCafe詳細ページ
   #works01Page{
     .worksPage{
       h1{
-        font-size: 2.5rem;
+        font-size: 2.0rem;
+        margin: 6% 0% 6%;
         &::first-letter{
-          font-size: 5.5rem;
+          font-size: 4.5rem;
         }
         &::before{
           bottom: -14%;
@@ -212,17 +213,17 @@ works01Page - ON/OFCafe詳細ページ
       }
       p{
         font-size: 1.5rem;
-        margin: 12% 0 4% 0;
+        margin: 19% 0 4% 0;
       }
       .url{
-        margin: 6% 0 9%;
+        margin: 6% 0 20%;
         a{
           font-size: 1.3rem;
         }
       }
       .worksPage-inner{
         dl{
-          font-size: 1.3;
+          font-size: 1.3rem;
         }     
       .comp-wrapper{
           p{
