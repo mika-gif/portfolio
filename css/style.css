@@ -116,6 +116,7 @@ input, select {
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   color: #313131;
+  cursor: pointer;
 }
 
 img {
@@ -1706,9 +1707,9 @@ body#indexPage.appear .wrapper {
   }
 }
 /* -------------------------------------------------------------------
-works01Page - ON/OFCafe詳細ページ
+works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
 ----------------------------------------------------------------------*/
-#works01Page .header {
+#works-webPage .header {
   -webkit-animation-name: fadein;
           animation-name: fadein;
   -webkit-animation-duration: 1s;
@@ -1730,7 +1731,7 @@ works01Page - ON/OFCafe詳細ページ
     opacity: 1;
   }
 }
-#works01Page .worksPage {
+#works-webPage .worksPage {
   -webkit-animation-name: fadein;
           animation-name: fadein;
   -webkit-animation-duration: 3s;
@@ -1744,7 +1745,7 @@ works01Page - ON/OFCafe詳細ページ
     opacity: 1;
   }
 }
-#works01Page .worksPage h1 {
+#works-webPage .worksPage h1 {
   margin: 3% 5% 8%;
   padding: 0 0 1% 2%;
   font-size: 2.5rem;
@@ -1753,11 +1754,11 @@ works01Page - ON/OFCafe詳細ページ
   border-bottom: 1px solid;
   position: relative;
 }
-#works01Page .worksPage h1::first-letter {
+#works-webPage .worksPage h1::first-letter {
   font-size: 7.5rem;
   color: #eaa0a0;
 }
-#works01Page .worksPage h1::before {
+#works-webPage .worksPage h1::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -1766,18 +1767,18 @@ works01Page - ON/OFCafe詳細ページ
   left: 0;
   background-color: #000;
 }
-#works01Page .worksPage p {
+#works-webPage .worksPage p {
   text-align: center;
   font-size: 2rem;
 }
-#works01Page .worksPage .url {
+#works-webPage .worksPage .url {
   text-align: center;
   margin: 5% 0 7%;
 }
-#works01Page .worksPage .url a {
+#works-webPage .worksPage .url a {
   font-size: 1.8rem;
 }
-#works01Page .worksPage .url a::after {
+#works-webPage .worksPage .url a::after {
   content: "";
   display: inline-block;
   width: 1.6rem;
@@ -1787,19 +1788,19 @@ works01Page - ON/OFCafe詳細ページ
   background-repeat: no-repeat;
   background-size: contain;
 }
-#works01Page .worksPage .url a:hover {
+#works-webPage .worksPage .url a:hover {
   color: rosybrown;
   font-weight: bold;
 }
-#works01Page .worksPage .worksPage-inner {
+#works-webPage .worksPage .worksPage-inner {
   margin: 0 auto;
   max-width: 640px;
 }
-#works01Page .worksPage .worksPage-inner .worksPage-mocupImg {
+#works-webPage .worksPage .worksPage-inner .worksPage-mocupImg {
   position: relative;
   padding: 4%;
 }
-#works01Page .worksPage .worksPage-inner .worksPage-mocupImg::after, #works01Page .worksPage .worksPage-inner .worksPage-mocupImg::before {
+#works-webPage .worksPage .worksPage-inner .worksPage-mocupImg::after, #works-webPage .worksPage .worksPage-inner .worksPage-mocupImg::before {
   content: "";
   display: block;
   position: absolute;
@@ -1810,7 +1811,7 @@ works01Page - ON/OFCafe詳細ページ
   transition: all 0.6s ease;
   border-radius: 2px;
 }
-#works01Page .worksPage .worksPage-inner .worksPage-mocupImg::after {
+#works-webPage .worksPage .worksPage-inner .worksPage-mocupImg::after {
   bottom: 0;
   right: 0;
   border-top-color: transparent;
@@ -1818,7 +1819,7 @@ works01Page - ON/OFCafe詳細ページ
   border-bottom-color: #313131;
   border-right-color: #313131;
 }
-#works01Page .worksPage .worksPage-inner .worksPage-mocupImg::before {
+#works-webPage .worksPage .worksPage-inner .worksPage-mocupImg::before {
   top: 0;
   left: 0;
   border-bottom-color: transparent;
@@ -1826,10 +1827,10 @@ works01Page - ON/OFCafe詳細ページ
   border-top-color: #313131;
   border-left-color: #313131;
 }
-#works01Page .worksPage .worksPage-inner .worksPage-mocupImg img {
+#works-webPage .worksPage .worksPage-inner .worksPage-mocupImg img {
   max-width: 100%;
 }
-#works01Page .worksPage .worksPage-inner dl {
+#works-webPage .worksPage .worksPage-inner dl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1839,31 +1840,31 @@ works01Page - ON/OFCafe詳細ページ
   font-size: 1.6rem;
   line-height: 1.8;
 }
-#works01Page .worksPage .worksPage-inner dl dt {
+#works-webPage .worksPage .worksPage-inner dl dt {
   width: 20%;
   height: 10%;
   color: #996c33;
   border-left: solid 5px burlywood;
   padding-left: 1%;
 }
-#works01Page .worksPage .worksPage-inner dl dd {
+#works-webPage .worksPage .worksPage-inner dl dd {
   width: 80%;
   margin-bottom: 10%;
   letter-spacing: 0.05rem;
 }
-#works01Page .worksPage .worksPage-inner dl dd .outline-margin {
+#works-webPage .worksPage .worksPage-inner dl dd .outline-margin {
   display: inline-block;
   margin-top: 8%;
 }
-#works01Page .worksPage .worksPage-inner .comp-wrapper {
+#works-webPage .worksPage .worksPage-inner .comp-wrapper {
   margin-bottom: 30%;
 }
-#works01Page .worksPage .worksPage-inner .comp-wrapper p {
+#works-webPage .worksPage .worksPage-inner .comp-wrapper p {
   position: relative;
   margin-bottom: 10%;
   font-size: 1.8rem;
 }
-#works01Page .worksPage .worksPage-inner .comp-wrapper p::before {
+#works-webPage .worksPage .worksPage-inner .comp-wrapper p::before {
   content: "";
   position: absolute;
   left: 0%;
@@ -1872,7 +1873,7 @@ works01Page - ON/OFCafe詳細ページ
   bottom: 0;
   border-top: dotted 2px #000;
 }
-#works01Page .worksPage .worksPage-inner .comp-wrapper p::after {
+#works-webPage .worksPage .worksPage-inner .comp-wrapper p::after {
   content: "";
   position: absolute;
   right: 0%;
@@ -1887,63 +1888,63 @@ works01Page - ON/OFCafe詳細ページ
 ----------------------------------------------------------------------*/
 /*================== タブレット対応 ========================*/
 @media screen and (max-width: 1024px) {
-  #works01Page .worksPage {
+  #works-webPage .worksPage {
     padding: 0 5%;
   }
-  #works01Page .worksPage h1 {
+  #works-webPage .worksPage h1 {
     margin: 3% 0% 6%;
   }
-  #works01Page .worksPage .worksPage-inner dl {
+  #works-webPage .worksPage .worksPage-inner dl {
     display: block;
   }
-  #works01Page .worksPage .worksPage-inner dl dt {
+  #works-webPage .worksPage .worksPage-inner dl dt {
     width: 100%;
   }
-  #works01Page .worksPage .worksPage-inner dl dt .br-sp {
+  #works-webPage .worksPage .worksPage-inner dl dt .br-sp {
     display: none;
   }
-  #works01Page .worksPage .worksPage-inner dl dd {
+  #works-webPage .worksPage .worksPage-inner dl dd {
     width: 100%;
     padding-top: 10%;
   }
 }
 /*======================= スマホ対応 ===========================*/
 @media screen and (max-width: 599px) {
-  #works01Page .worksPage h1 {
+  #works-webPage .worksPage h1 {
     font-size: 2rem;
     margin: 6% 0% 6%;
   }
-  #works01Page .worksPage h1::first-letter {
+  #works-webPage .worksPage h1::first-letter {
     font-size: 4.5rem;
   }
-  #works01Page .worksPage h1::before {
+  #works-webPage .worksPage h1::before {
     bottom: -14%;
   }
-  #works01Page .worksPage p {
+  #works-webPage .worksPage p {
     font-size: 1.4rem;
     margin: 19% 0 4% 0;
   }
-  #works01Page .worksPage .url {
+  #works-webPage .worksPage .url {
     margin: 6% 0 20%;
   }
-  #works01Page .worksPage .url a {
+  #works-webPage .worksPage .url a {
     font-size: 1.3rem;
   }
-  #works01Page .worksPage .url a::after {
+  #works-webPage .worksPage .url a::after {
     width: 1.2rem;
     height: 1.2rem;
   }
-  #works01Page .worksPage .worksPage-inner dl {
+  #works-webPage .worksPage .worksPage-inner dl {
     font-size: 1.3rem;
   }
-  #works01Page .worksPage .worksPage-inner .comp-wrapper p {
+  #works-webPage .worksPage .worksPage-inner .comp-wrapper p {
     font-size: 1.3rem;
   }
-  #works01Page .worksPage .worksPage-inner .comp-wrapper p::before {
+  #works-webPage .worksPage .worksPage-inner .comp-wrapper p::before {
     width: 22%;
     height: 8%;
   }
-  #works01Page .worksPage .worksPage-inner .comp-wrapper p::after {
+  #works-webPage .worksPage .worksPage-inner .comp-wrapper p::after {
     width: 22%;
     height: 8%;
   }
