@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------
-works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
+works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
 ----------------------------------------------------------------------*/
 
 #works-webPage{
@@ -51,10 +51,11 @@ works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
     p{
       text-align: center;
       font-size: 2.0rem;
+      margin-bottom: 6%;
     }
     .url{
       text-align: center;
-      margin: 5% 0 7%;
+      margin: 0 0 7%;
       a{
         font-size: 1.8rem;
         &::after{

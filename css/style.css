@@ -1770,10 +1770,11 @@ works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
 #works-webPage .worksPage p {
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 6%;
 }
 #works-webPage .worksPage .url {
   text-align: center;
-  margin: 5% 0 7%;
+  margin: 0 0 7%;
 }
 #works-webPage .worksPage .url a {
   font-size: 1.8rem;
