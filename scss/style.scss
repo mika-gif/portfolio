@@ -829,7 +829,7 @@ body#indexPage.appear .wrapper{
   #page-top{
     /*リンクを右下に固定*/
     position: fixed;
-    right: 87px;
+    right: 5.5%;
     z-index: 2;
     /*はじめは非表示*/
     opacity: 0;
@@ -870,14 +870,14 @@ body#indexPage.appear .wrapper{
       justify-content:center;
       align-items:center;
       background: $gray-color;
-      border-radius: 5px;
+      border-radius: 36px;
       border: 1px solid $silverPink-color;
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       color: $silverPink-color;
       text-align: center;
       text-decoration: none;
-      font-size:0.6rem;
+      font-size: 1.2rem;
       transition:all 0.3s;
       &:hover{
         opacity: 0.5;
@@ -1342,16 +1342,16 @@ body#indexPage.appear .wrapper{
   /*リンクの形状*/
   #footer{
     #page-top a{
-      // width: 55px;
-      // height: 55px;
-      // transform: scale(0.6);//chrome対応 fontsize:6px 
+      width: 60px;
+      height: 60px;
+      font-size: 1.0rem;
       &:hover{
         opacity: 1;
       }
     }
     /*リンクを右下に固定*/
     #page-top {
-      right: 22px;
+      right: 2.5%
     }
 }
 

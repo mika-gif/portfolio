@@ -1130,7 +1130,7 @@ body#indexPage.appear .wrapper {
 #footer #page-top {
   /*リンクを右下に固定*/
   position: fixed;
-  right: 87px;
+  right: 5.5%;
   z-index: 2;
   /*はじめは非表示*/
   opacity: 0;
@@ -1206,14 +1206,14 @@ body#indexPage.appear .wrapper {
       -ms-flex-align: center;
           align-items: center;
   background: #313131;
-  border-radius: 5px;
+  border-radius: 36px;
   border: 1px solid #f0e8ec;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   color: #f0e8ec;
   text-align: center;
   text-decoration: none;
-  font-size: 0.6rem;
+  font-size: 1.2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -1693,11 +1693,16 @@ body#indexPage.appear .wrapper {
   #footer {
     /*リンクを右下に固定*/
   }
+  #footer #page-top a {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
   #footer #page-top a:hover {
     opacity: 1;
   }
   #footer #page-top {
-    right: 22px;
+    right: 2.5%;
   }
 }
 /* -------------------------------------------------------------------
