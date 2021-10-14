@@ -143,8 +143,7 @@ html body .wrapper {
   width: 90%;
   margin: 0% auto;
   margin-bottom: 3%;
-  background: -webkit-gradient(linear, left top, right top, from(#eeeaec), to(#f0e8ec));
-  background: linear-gradient(to right, #eeeaec, #f0e8ec);
+  background-color: #f0e8ec;
   -webkit-box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
           box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   border-radius: 0 0 138px 40px;
@@ -1708,7 +1707,7 @@ body#indexPage.appear .wrapper {
   }
 }
 /* -------------------------------------------------------------------
-works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
+works-webPage - ON/OFCafe・ポートフォリオ・カラーシャンプー詳細ページ
 ----------------------------------------------------------------------*/
 #works-webPage .header {
   -webkit-animation-name: fadein;
