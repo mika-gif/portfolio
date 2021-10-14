@@ -143,7 +143,8 @@ html body .wrapper {
   width: 90%;
   margin: 0% auto;
   margin-bottom: 3%;
-  background-color: #f0e8ec;
+  background: -webkit-gradient(linear, left top, right top, from(#eeeaec), to(#f0e8ec));
+  background: linear-gradient(to right, #eeeaec, #f0e8ec);
   -webkit-box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
           box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   border-radius: 0 0 138px 40px;
@@ -1707,7 +1708,7 @@ body#indexPage.appear .wrapper {
   }
 }
 /* -------------------------------------------------------------------
-works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
+works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
 ----------------------------------------------------------------------*/
 #works-webPage .header {
   -webkit-animation-name: fadein;
@@ -1857,6 +1858,20 @@ works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
   display: inline-block;
   margin-top: 8%;
 }
+#works-webPage .worksPage .worksPage-inner dl dd a::after {
+  content: "";
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 1%;
+  background-image: url(../images/icon_link.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#works-webPage .worksPage .worksPage-inner dl dd a:hover {
+  color: rosybrown;
+  font-weight: bold;
+}
 #works-webPage .worksPage .worksPage-inner .comp-wrapper {
   margin-bottom: 30%;
 }
@@ -1913,7 +1928,7 @@ works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
 @media screen and (max-width: 599px) {
   #works-webPage .worksPage h1 {
     font-size: 2rem;
-    margin: 6% 0% 6%;
+    margin: 6% 0% 20%;
   }
   #works-webPage .worksPage h1::first-letter {
     font-size: 4.5rem;
@@ -1923,10 +1938,10 @@ works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
   }
   #works-webPage .worksPage p {
     font-size: 1.4rem;
-    margin: 19% 0 4% 0;
+    margin-bottom: 10%;
   }
   #works-webPage .worksPage .url {
-    margin: 6% 0 20%;
+    margin-bottom: 20%;
   }
   #works-webPage .worksPage .url a {
     font-size: 1.3rem;
@@ -1937,6 +1952,13 @@ works-webPage - ON/OFCafe・PORTFOLIO詳細ページ
   }
   #works-webPage .worksPage .worksPage-inner dl {
     font-size: 1.3rem;
+  }
+  #works-webPage .worksPage .worksPage-inner dl dd a {
+    font-size: 1.2rem;
+  }
+  #works-webPage .worksPage .worksPage-inner dl dd a::after {
+    width: 1.2rem;
+    height: 1.2rem;
   }
   #works-webPage .worksPage .worksPage-inner .comp-wrapper p {
     font-size: 1.3rem;

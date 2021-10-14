@@ -132,6 +132,22 @@ works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
           display: inline-block;
           margin-top: 8%; 
         }
+        a{
+          &::after{
+            content: '';
+            display: inline-block;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin: 0 1%;
+            background-image: url(../images/icon_link.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          &:hover{
+            color: rosybrown;
+            font-weight: bold;
+          }
+        }
       }
     }
     .comp-wrapper{
@@ -206,7 +222,7 @@ works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
     .worksPage{
       h1{
         font-size: 2.0rem;
-        margin: 6% 0% 6%;
+        margin: 6% 0% 20%;
         &::first-letter{
           font-size: 4.5rem;
         }
@@ -216,10 +232,10 @@ works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
       }
       p{
         font-size: 1.4rem;
-        margin: 19% 0 4% 0;
+        margin-bottom: 10%;
       }
       .url{
-        margin: 6% 0 20%;
+        margin-bottom: 20%;
         a{
           font-size: 1.3rem;
           &::after{
@@ -231,6 +247,15 @@ works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
       .worksPage-inner{
         dl{
           font-size: 1.3rem;
+          dd{
+            a{
+              font-size: 1.2rem;
+              &::after{
+                width: 1.2rem;
+                height: 1.2rem;
+              }
+            }
+          }
         }     
       .comp-wrapper{
           p{

@@ -48,7 +48,8 @@ html {
       width: 90%;
       margin: 0% auto;
       margin-bottom: 3%;
-      background-color: $silverPink-color;
+      // background-color: $silverPink-color;
+      background: linear-gradient(to right,#eeeaec,#f0e8ec);
       box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
       border-radius: 0 0 138px 40px;
     }
@@ -147,15 +148,15 @@ body#indexPage.appear .splashbg2{
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;
 	animation-fill-mode:forwards;
-    content: "";
-    position:fixed;
+  content: "";
+  position:fixed;
 	z-index: 999;
-    width: 100%;
-    height: 100vh;
-    top: 0;
+  width: 100%;
+  height: 100vh;
+  top: 0;
 	right:50%;
-    transform: scaleX(1);
-    background-color: #333;
+  transform: scaleX(1);
+  background-color: #333;
 }
 
 @keyframes PageAnime2{
