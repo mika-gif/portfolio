@@ -1927,11 +1927,11 @@ works-webPage - ON/OFCafe・PORTFOLIO・カラーシャンプー詳細ページ
 /*======================= スマホ対応 ===========================*/
 @media screen and (max-width: 599px) {
   #works-webPage .worksPage h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 6% 0% 20%;
   }
   #works-webPage .worksPage h1::first-letter {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
   #works-webPage .worksPage h1::before {
     bottom: -14%;
