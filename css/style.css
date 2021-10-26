@@ -998,6 +998,10 @@ body#indexPage.appear .wrapper {
   padding-top: 5%;
   line-height: 1.5;
 }
+.works-contents .works-wrap .works-inner a p .works-fontsize {
+  font-size: 1.4rem;
+  color: #808080;
+}
 
 /*=================== about ======================*/
 .about-contents {
@@ -1015,13 +1019,13 @@ body#indexPage.appear .wrapper {
   left: 42px;
   z-index: 10;
   background-color: rgba(234, 160, 160, 0.6);
-  padding: 7% 10% 10% 7%;
-  width: 60%;
+  padding: 7% 7% 10% 7%;
+  width: 80%;
 }
 .about-contents .about-wrap .about-inner .about-txt p {
   margin-top: 10%;
   font-size: 1.8rem;
-  line-height: 1.5;
+  line-height: 2;
   white-space: pre-line;
   text-align: start;
 }
@@ -1037,7 +1041,7 @@ body#indexPage.appear .wrapper {
 
 /*=================== contact ======================*/
 .contact-contents {
-  margin: 100% 0 10%;
+  margin: 140% 0 10%;
 }
 .contact-contents .contact-wrap {
   margin: 7% 7% 25%;
@@ -1350,12 +1354,9 @@ body#indexPage.appear .wrapper {
     position: relative;
   }
   .about-contents .about-wrap .about-inner .about-txt {
-    position: absolute;
     top: 128px;
     left: 42px;
     z-index: 10;
-    background-color: rgba(234, 160, 160, 0.6);
-    padding: 7% 10% 10% 7%;
   }
   .about-contents .about-wrap .about-inner .about-txt p {
     font-size: 1.3rem;
@@ -1372,7 +1373,7 @@ body#indexPage.appear .wrapper {
 
   /* --------------contact--------------*/
   .contact-contents {
-    margin: 110% 0 10%;
+    margin: 160% 0 10%;
   }
   .contact-contents .contact-wrap {
     margin: 10% 7% 25%;
@@ -1644,18 +1645,17 @@ body#indexPage.appear .wrapper {
     width: 90%;
     margin-bottom: 10%;
   }
-  .works-contents .works-wrap .works-inner p {
+  .works-contents .works-wrap .works-inner a p {
     font-size: 1.5rem;
+  }
+  .works-contents .works-wrap .works-inner a p .works-fontsize {
+    font-size: 1.2rem;
   }
 
   /* --------------------about--------------------*/
-  .about-contents .about-wrap .about-inner {
-    position: relative;
-  }
   .about-contents .about-wrap .about-inner .about-txt {
-    position: absolute;
     top: 55px;
-    left: -20px;
+    left: 0;
     width: 100%;
   }
   .about-contents .about-wrap .about-inner .about-txt p {
@@ -1664,7 +1664,7 @@ body#indexPage.appear .wrapper {
 
   /* --------------------contact--------------------*/
   .contact-contents {
-    margin: 555px 0 10%;
+    margin: 385% 0 10%;
   }
   .contact-contents .contact-wrap {
     margin: 10% 0 35%;
