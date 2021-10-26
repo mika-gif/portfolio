@@ -55,10 +55,9 @@ if (!sessionStorage.getItem(keyName)) {
     $('.topTxt>p').css("animation-delay", "4s");
 
     //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
-    $("#splash").delay(1500).fadeOut('slow', function () {//ローディングエリアを1.5秒でフェードアウト
+    $("#splash").delay(1200).fadeOut('slow', function () {//ローディングエリアを1.5秒でフェードアウト
 
       $('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-      // $("#indexPage").css("background", "#333");
     });
     //=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJS
 
@@ -113,7 +112,6 @@ if (!sessionStorage.getItem(keyName)) {
   });
   TextTypingAnime();/* アニメーション用の関数を呼ぶ*/
 }
-
 
 
 
